@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="topnav">
+            <nav>
+                <a href="index.html">FORSIDE</a>
+                <a href="about.html">ABOUT US</a>
+                <a href="catalogue.html">CATALOGUE</a>
+                <a href="lookbook.html">LOOKBOOK</a>
+                <a href="contact.html">CONTACT</a>
+                <a href="stockists.html">STOCKISTS</a>
+            </nav>
+        </div>
+        <!--burger menu-->
+        <div class="burgermenu">
+            <nav>
+                <div id="menuknap">☰</div>
+                <ul id="menu" class="hidden">
+                    <li><a href="index.html">FORSIDE</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li> <a href="catalogue.html">CATALOGUE</a></li>
+                    <li> <a href="lookbook.html">LOOKBOOK</a></li>
+                    <li> <a href="contact.html">CONTACT</a></li>
+                    <li> <a href="stockists.html">STOCKISTS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <h1 class="overskrift"></h1>
+        <section class="liste">
+        </section>
+
+
+    </main>
+
+
+    <main id="single">
+        <button class="luk">Tilbage</button>
+        <section class="indhold">
+            <article class="infoCykler">
+
+                <h2></h2>
+                <div class="gridsingle">
+                    <img class="billede" src="" alt="">
+                    <p class="lang"></p>
+                    <p class="pris">Pris: </p>
+                    <p class="farver">Farve: </p>
+                    <!--<p class="kg">Vægt: </p>-->
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+    </footer>
+
+
+    <script>
+        let urlParams = new URLSearchParams(window.location.search);
+        let navn = urlParams.get("navn");
+        let personer;
+
+        window.addEventListener("load", start);
+
+        function start() {
+            getJson();
+        }
+
+        async function getJson() {
+
+            let jsondata = await fetch("https://theodior.dk/kea/The_Leftovers/wordpress/wp-json/wp/v2/leftovers?per_page=100");
+
+            personer = await jsondata.json();
+            visJson();
+
+
+        }
+
+
+        function visJson() {
+
+            personer.forEach((person) => {
+
+                if (person.title.rendered == navn) {
+                    document.querySelector("h2").textContent = person.navn;
+
+                    document.querySelector(".billede").src = person.billede.guid;
+                    document.querySelector(".pris").textContent += person.pris += ",-";
+                    document.querySelector(".lang").innerHTML = person.lang;
+                    document.querySelector(".farver").textContent += person.farver;
+                    /*document.querySelector(".kg").textContent += person.kilo += " kg";*/
+
+                }
+
+            })
+        }
+
+        document.querySelector(".luk").addEventListener("click", () => {
+            history.back();
+        })
+
+    </script>
+</body>
+
+</html>
