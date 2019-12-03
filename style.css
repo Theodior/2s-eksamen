@@ -5,6 +5,9 @@ html {
 
 body {
     margin: 0 auto;
+    padding: 0;
+    margin: 0;
+    border: 0;
 }
 
 
@@ -12,30 +15,105 @@ body {
     box-sizing: border-box;
 }
 
+header {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+
+/** NAV & BURGERMENU **/
+
+
+.logo {
+    width: 65px;
+    height: 65px;
+    position: fixed;
+    right: 93vw;
+    top: 0.5vw;
+    cursor: pointer;
+    z-index: 1;
+}
+
+nav a {
+    color: white;
+}
+
+nav a:hover {
+    color: white;
+    text-shadow: 0 0 0.6px black;
+}
+
+
+
+.logo:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+
 .hidden {
     display: none;
 }
 
-/*burger menu*/
 #menu .hidden {
     display: none;
     transform: scale(0);
     transform: translateX(-100%);
     opacity: 0;
-
 }
 
 #menuknap {
-    display: flex;
-    display: inline-block;
-    left: 75vw;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 3vw;
+    right: 4vw;
+    z-index: 3;
 
 }
 
 #menu {
+    padding-top: 50px;
+    position: relative;
     list-style-type: none;
-    transition: transform .3s;
-    transform-origin: top right;
+    background-color: #0d0c1d;
+    width: 100vw;
+    height: 20000px;
+    z-index: 2;
+    margin: 0px;
+}
+
+
+#menu a {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+#menu a:hover {
+    transform: scale(1.2);
+}
+
+
+.topnav a {
+    cursor: pointer;
+    text-decoration: none;
+    padding-left: 25px;
+    padding-right: 2px;
+    font-size: 1.3rem;
+    line-height: 80px;
+}
+
+.topnav a:hover {
+    color: black;
+    text-shadow: 0 0 0.5px black;
 }
 
 .burgermenu {
@@ -43,14 +121,36 @@ body {
     align-items: flex-end;
     text-align: right;
     justify-content: flex-end;
-    margin: 1vw 4vw;
 }
 
-@media only screen and (min-width: 700px) {
+.topnav {
+    overflow: hidden;
+    justify-content: flex-end;
+    display: flex;
+    margin-right: 50px;
 
+}
+
+/***********************************************************/
+
+
+
+
+@media screen and (min-width:600px) {
     #menuknap {
         display: none;
     }
+}
+
+
+@media screen and (max-width:600px) {
+    .topnav {
+        display: none;
+    }
+}
+
+@media screen and (min-width:960px) {
+
 
     #menu.hidden {
         transform: translateX(0);
@@ -60,42 +160,10 @@ body {
     #menu li {
         display: inline-block;
     }
-}
 
-/*************************************top menu**************************/
-.topnav {
-    background-color: whitesmoke;
-    overflow: hidden;
-    justify-content: center;
-    display: flex;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-    font-family: 'Questrial', sans-serif;
-    float: left;
-    color: #000000;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    justify-content: center;
-    display: flex;
-}
-
-.topnav a:hover {
-    background-color: rgb(10, 0, 255);
-    color: black;
-}
-
-.topnav a.active {
-    background-color: #4CAF50;
-    color: white;
-}
-
-
-@media only screen and (max-width: 700px) {
     .topnav {
-        display: none;
+        height: 80px;
     }
+
+
 }
