@@ -64,7 +64,7 @@ body {
 
 /*************************************top menu**************************/
 .topnav {
-    background-color: rgba(203, 2, 195, 0.81);
+    background-color: whitesmoke;
     overflow: hidden;
     justify-content: center;
     display: flex;

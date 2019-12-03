@@ -13,9 +13,13 @@
 <style>
     /* Mobile first*/
 
+    body {
+        background-color: whitesmoke;
+    }
+
     .overskiftabout {
         display: grid;
-        grid-template-columns: 25vw 20vw 15vw 30vw;
+        grid-template-columns: 26vw 20vw 15vw 30vw;
         margin-bottom: 8vw;
         margin-top: 4vw;
 
@@ -30,6 +34,7 @@
 
     .overskiftabout h2 {
         display: flex;
+        font-size: 2em;
 
         align-items: center;
     }
@@ -52,18 +57,19 @@
 
     }
 
+
+
     /*Tablet*/
 
     @media only screen and (min-width: 600px) {
 
-        body {
-            background: lightblue;
-        }
+
 
 
         .overskiftabout {
             display: grid;
-            grid-template-columns: 25vw 30vw 20vw 30vw;
+            grid-template-columns: 30vw 20vw 20vw 30vw;
+            margin-bottom: 1em;
 
 
 
@@ -72,7 +78,7 @@
         .overskiftabout img {
 
 
-            width: 25vw;
+            width: 20vw;
             height: 20vw;
 
 
@@ -85,7 +91,7 @@
         /*Sætter billedet i bunden */
         .contentabout {
             display: grid;
-            grid-template-rows: 40vw 50vw 40vw;
+            grid-template-rows: 40vw 50vw 70vw;
             margin: 0px;
         }
 
@@ -106,48 +112,56 @@
 
         @media only screen and (min-width: 680px) {
 
-            body {
-                background: red;
-            }
+
 
             .contentabout {
                 display: grid;
-                grid-template-rows: 35vw 50vw 40vw;
+                grid-template-rows: 35vw 40vw 60vw;
                 margin: 0px;
+            }
+
+            .overskiftabout img {
+
+
+                width: 20vw;
+                height: 20vw;
+
+
+
+
+
             }
 
             /*flottere respons*/
 
             @media only screen and (min-width: 720px) {
 
-                body {
-                    background: red;
-                }
 
                 .contentabout {
                     display: grid;
-                    grid-template-rows: 30vw 40vw 40vw;
+                    grid-template-rows: 30vw 40vw 60vw;
                     margin: 0px;
                 }
 
 
-
-
-
-
             }
+
+
+
+
+
+
+
 
 
             @media only screen and (min-width: 800px) {
-                body {
-                    background: yellow;
-                }
+
 
                 .overskiftabout img {
 
 
                     width: 20vw;
-                    height: 15vw;
+                    height: 20vw;
 
 
 
@@ -157,7 +171,7 @@
 
                 .contentabout {
                     display: grid;
-                    grid-template-rows: 22vw 30vw 20vw;
+                    grid-template-rows: 22vw 30vw 60vw;
                     margin: 0px;
                 }
 
@@ -166,17 +180,17 @@
 
 
             }
+
+            /*flottere respons*/
 
 
             @media only screen and (min-width: 980px) {
-                body {
-                    background: purple;
-                }
+
 
                 .overskiftabout img {
 
 
-                    width: 20vw;
+                    width: 15vw;
                     height: 15vw;
 
 
@@ -187,8 +201,10 @@
 
                 .contentabout {
                     display: grid;
-                    grid-template-rows: 15vw 20vw 20vw;
-                    margin: 0px;
+                    grid-template-rows: 20vw 20vw 50vw;
+
+                    margin-right: 20vw;
+                    margin-left: 20vw;
                 }
 
 
@@ -197,43 +213,80 @@
 
             }
 
+            /*Laptop*/
+
             @media only screen and (min-width: 1110px) {
-                body {
-                    background: grey;
-                }
+
 
                 .overskiftabout {
                     display: grid;
-                    grid-template-columns: 35vw 12vw 15vw 30vw;
+                    grid-template-columns: 35vw 16vw 20vw 30vw;
                     margin-bottom: 2vw;
                     margin-top: 4vw;
 
                 }
 
+                .overskiftabout h2 {
+                    font-size: 3em;
+                }
+
                 .overskiftabout img {
 
 
-                    width: 10vw;
-                    height: 10vw;
+                    width: 16vw;
+                    height: 16vw;
 
 
 
 
+
+                }
+
+                /*grid i laptop*/
+
+                .aboutvid video {
+                    height: 450px;
+                    width: 780px;
+                    grid-row: 3;
+                    grid-column: 2/ span 1;
+                    margin-top: 0px;
 
                 }
 
                 .contentabout {
                     display: grid;
-                    grid-template-rows: 15vw 17vw 10vw;
-                    margin-right: 20vw;
-                    margin-left: 20vw
+                    grid-template-rows: 17vw 15vw 50vw;
+                    grid-template-columns: 20vw 60vw 20vw;
+                    margin: 0;
                 }
+
+                .abouttxt {
+                    grid-row: 1;
+                    grid-column: 2/ span 1;
+
+
+                }
+
+                .abouttxt2 {
+                    grid-row: 2;
+                    grid-column: 2/ span 1;
+
+
+                }
+
+                .aboutvid {
+                    grid-row: 3;
+                    grid-column: 2;
+                }
+
+
 
 
 
 
 
             }
+
 </style>
 
 
@@ -301,7 +354,11 @@
 
 
 
+    <footer>
 
+    </footer>
 
     <script src="script.js"></script>
-</body></html>
+</body>
+
+</html>
