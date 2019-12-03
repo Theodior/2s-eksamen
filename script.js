@@ -11,6 +11,13 @@ function start() {
     hentJson();
     addEventListenersToButtons();
     sidenVises();
+    hentFooter();
+}
+
+async function hentFooter() {
+    const response = await fetch("inc/footer.html");
+    const inclusion = await response.text();
+    document.querySelector("footer").innerHTML = inclusion;
 }
 
 /*burger menu*/

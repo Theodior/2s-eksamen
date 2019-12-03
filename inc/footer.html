@@ -1,0 +1,131 @@
+<style>
+    html {
+        font-size: 0.625rem;
+        font-family: 'Roboto', sans-serif;
+        color: white;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 2rem;
+        color: white;
+    }
+
+    /** FOOTER CSS **/
+
+    .up img {
+        color: white;
+        height: 40px;
+        position: absolute;
+        left: 12px;
+        top: 5px;
+        width: 25px;
+        margin: auto;
+    }
+
+    .copyright {
+        width: 100%;
+        text-align: center;
+        background-color: #17191c;
+        padding: 2rem 0;
+        height: 125px;
+        /*Gør at footer er fastlåst på siden, og man hele tiden kan se den*/
+        position: fixed;
+        margin-top: 10rem;
+        bottom: -10px;
+
+
+    }
+
+    .pics {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .footer_logo {
+        height: 40px;
+    }
+
+    .footer_logo2 {
+        height: 40px;
+    }
+
+    .up {
+        /*position: absolut; Et element med position: absolut; er placeret i forhold til nærmeste placerede forfader (i stedet for placeret i forhold til visningsporten, som fast). Imidlertid; Hvis et absolut positioneret element ikke har nogen positionerede forfædre, bruger det dokumentets krop og bevæger sig sammen med siderulle.*/
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        background-color: #ff9300;
+        top: -2.5rem;
+        right: 5rem;
+        border-radius: 100%;
+        display: flex;
+        animation: beating 3s infinite;
+
+    }
+
+    .up img {
+        color: white;
+        height: 40px;
+        position: absolute;
+        left: 12px;
+        top: 5px;
+        width: 25px;
+        margin: auto;
+    }
+
+    .copyright p {
+        font-size: 1.4rem;
+    }
+
+    .fl3x {
+        display: flex;
+        justify-content: center;
+    }
+
+    .fl3x p {
+        margin: 10px;
+    }
+
+    /** FOOTER ANIMATION CSS **/
+
+    /*Animationen vokser i farve fra 0% -> 70% -> 100%*/
+
+    @keyframes beating {
+        0% {
+            box-shadow: 0 0 0 0 #ff9300;
+        }
+
+        70% {
+            box-shadow: 0 0 0 2rem rgba(253, 87, 191, 0);
+        }
+
+        100% {
+            box-shadow: 0 0 0 0 rgba(253, 87, 191, 0);
+        }
+    }
+
+    /** FOOTER CSS SLUT **/
+
+</style>
+
+
+<footer class="copyright">
+    <div class="up">
+        <a href="index.html#landing"><img src="icons/arrow-up_white.svg" alt="arrow"></a>
+    </div>
+    <div class="fl3x">
+        <p>&copy; The Leftovers LTD,</p>
+        <p>Falstervej 12, 2000 Frederiksberg </p>
+    </div>
+    <div class="pics">
+        <img class="footer_logo" src="logo/LOGO-b_blue.png" alt="arrow">
+        <img class="footer_logo2" src="logo/LOGO-a_blue.png" alt="arrow">
+    </div>
+</footer>
