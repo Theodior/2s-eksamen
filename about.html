@@ -11,25 +11,229 @@
 
 
 <style>
-    #about {
-        margin-left: 10vw;
-        margin-right: 10vw;
-    }
+    /* Mobile first*/
 
     .overskiftabout {
         display: grid;
-        grid-template-columns: 9vw 30vw;
+        grid-template-columns: 25vw 20vw 15vw 30vw;
+        margin-bottom: 8vw;
+        margin-top: 4vw;
 
-        margin-left: 25vw;
-        margin-right: 20vw;
-        margin-bottom: 3vw;
+
     }
 
     .overskiftabout img {
-        width: 8vw;
-        height: 8vw;
+        grid-column: 2;
+        width: 20vw;
+        height: 20vw;
     }
 
+    .overskiftabout h2 {
+        display: flex;
+
+        align-items: center;
+    }
+
+
+    .aboutvid {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 9vw;
+        margin-top: 9vw;
+    }
+
+    .abouttxt,
+    .abouttxt2 {
+        display: grid;
+        letter-spacing: 1px;
+        line-height: 20px;
+        margin: auto;
+        max-width: 80vw;
+
+    }
+
+    /*Tablet*/
+
+    @media only screen and (min-width: 600px) {
+
+        body {
+            background: lightblue;
+        }
+
+
+        .overskiftabout {
+            display: grid;
+            grid-template-columns: 25vw 30vw 20vw 30vw;
+
+
+
+        }
+
+        .overskiftabout img {
+
+
+            width: 25vw;
+            height: 20vw;
+
+
+
+
+
+        }
+
+
+        /*Sætter billedet i bunden */
+        .contentabout {
+            display: grid;
+            grid-template-rows: 40vw 50vw 40vw;
+            margin: 0px;
+        }
+
+        .aboutvid video {
+            height: 400px;
+            width: 530px;
+            grid-row: 3;
+            margin-bottom: 6vw
+        }
+
+
+
+        .abouttxt2 {
+            grid-row: 2;
+        }
+
+        /*flottere respons*/
+
+        @media only screen and (min-width: 680px) {
+
+            body {
+                background: red;
+            }
+
+            .contentabout {
+                display: grid;
+                grid-template-rows: 35vw 50vw 40vw;
+                margin: 0px;
+            }
+
+            /*flottere respons*/
+
+            @media only screen and (min-width: 720px) {
+
+                body {
+                    background: red;
+                }
+
+                .contentabout {
+                    display: grid;
+                    grid-template-rows: 30vw 40vw 40vw;
+                    margin: 0px;
+                }
+
+
+
+
+
+
+            }
+
+
+            @media only screen and (min-width: 800px) {
+                body {
+                    background: yellow;
+                }
+
+                .overskiftabout img {
+
+
+                    width: 20vw;
+                    height: 15vw;
+
+
+
+
+
+                }
+
+                .contentabout {
+                    display: grid;
+                    grid-template-rows: 22vw 30vw 20vw;
+                    margin: 0px;
+                }
+
+
+
+
+
+            }
+
+
+            @media only screen and (min-width: 980px) {
+                body {
+                    background: purple;
+                }
+
+                .overskiftabout img {
+
+
+                    width: 20vw;
+                    height: 15vw;
+
+
+
+
+
+                }
+
+                .contentabout {
+                    display: grid;
+                    grid-template-rows: 15vw 20vw 20vw;
+                    margin: 0px;
+                }
+
+
+
+
+
+            }
+
+            @media only screen and (min-width: 1110px) {
+                body {
+                    background: grey;
+                }
+
+                .overskiftabout {
+                    display: grid;
+                    grid-template-columns: 35vw 12vw 15vw 30vw;
+                    margin-bottom: 2vw;
+                    margin-top: 4vw;
+
+                }
+
+                .overskiftabout img {
+
+
+                    width: 10vw;
+                    height: 10vw;
+
+
+
+
+
+                }
+
+                .contentabout {
+                    display: grid;
+                    grid-template-rows: 15vw 17vw 10vw;
+                    margin-right: 20vw;
+                    margin-left: 20vw
+                }
+
+
+
+
+
+            }
 </style>
 
 
@@ -66,20 +270,29 @@
 
 
         <div class="overskiftabout">
-            <img src="wi.JPG" alt="">
+            <img src="img/logoblack.png" alt="">
             <h2 class="tlo">About</h2>
         </div>
 
-        <div class="abouttxt">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste pariatur voluptates et, nam sunt iusto laborum ex optio rem animi facilis blanditiis fugit! Fugit accusantium, aperiam adipisci expedita, dignissimos
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit tempora voluptas soluta dolorem unde. Sint quo magnam quibusdam doloremque temporibus at nobis suscipit ad est, qui dolorem cum, aliquid ipsa?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab doloremque, debitis vel id amet tempore commodi! Suscipit necessitatibus, accusantium. Aperiam explicabo laborum eos neque harum odit repellendus rem, a iste?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptate ab unde facere hic atque earum impedit? Assumenda quos a iste iusto earum similique, repellendus et ullam cupiditate, officiis accusantium.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste reiciendis deleniti, distinctio, temporibus est laudantium facilis ratione. Aliquid repellat mollitia dolore optio laboriosam distinctio, necessitatibus id officiis, sit amet dolorum.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque architecto saepe in vitae reprehenderit quasi, asperiores maxime, sint cupiditate. Autem, soluta, illo. Quam, nemo inventore nesciunt sequi eveniet ducimus voluptates.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem pariatur odio facere fugiat illo, placeat nostrum eius eligendi libero nulla. Aperiam qui sunt maiores dolores aliquam omnis veritatis quaerat quis!
+        <div class="contentabout">
+            <div class="abouttxt">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste pariatur voluptates et, nam sunt iusto laborum ex optio rem animi facilis blanditiis fugit! Fugit accusantium, aperiam adipisci expedita, dignissimos
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit tempora voluptas soluta dolorem unde. Sint quo magnam quibusdam doloremque temporibus at nobis suscipit ad est, qui dolorem cum, aliquid ipsa?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab doloremque, debitis vel id amet tempore commodi! Suscipit necessitatibus, accusantium. Aperiam explicabo laborum eos neque harum odit repellendus rem, a iste?
+            </div>
+            <div class="aboutvid">
+                <video width="320" height="240" controls>
+                    <source src="movie.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video> </div>
+            <div class="abouttxt2">
 
-
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptate ab unde facere hic atque earum impedit? Assumenda quos a iste iusto earum similique, repellendus et ullam cupiditate, officiis accusantium.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste reiciendis deleniti, distinctio, temporibus est laudantium facilis ratione. Aliquid repellat mollitia dolore optio laboriosam distinctio, necessitatibus id officiis, sit amet dolorum.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque architecto saepe in vitae reprehenderit quasi, asperiores maxime, sint cupiditate. Autem, soluta, illo. Quam, nemo inventore nesciunt sequi eveniet ducimus voluptates.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem pariatur odio facere fugiat illo, placeat nostrum eius eligendi libero nulla. Aperiam qui sunt maiores dolores aliquam omnis veritatis quaerat quis!
+            </div>
         </div>
 
 
@@ -91,6 +304,4 @@
 
 
     <script src="script.js"></script>
-</body>
-
-</html>
+</body></html>
