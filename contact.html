@@ -8,36 +8,104 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+<style>
+    .overskriftcontact {
+        display: grid;
+        grid-template-columns: 26vw 20vw 15vw 30vw;
+        margin-bottom: 8vw;
+        margin-top: 4vw;
+
+
+    }
+
+    .overskriftcontact img {
+        grid-column: 2;
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .overskriftcontact h2 {
+        display: flex;
+        font-size: 2em;
+
+        align-items: center;
+    }
+
+    .gridcontact {
+        display: grid;
+
+        grid-template-columns: 48vw 48vw;
+        text-align: center;
+        border: 2px inset black;
+        margin-left: 1vw;
+        margin-right: 1vw;
+
+
+    }
+</style>
+
+
+<header>
+    <div class="topnav">
+        <nav>
+            <a href="index.html">FORSIDE</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="catalogue.html">CATALOGUE</a>
+            <a href="lookbook.html">LOOKBOOK</a>
+            <a href="contact.html">CONTACT</a>
+            <a href="stockists.html">STOCKISTS</a>
+        </nav>
+    </div>
+    <!--burger menu-->
+    <div class="burgermenu">
+        <nav>
+            <div id="menuknap">☰</div>
+            <ul id="menu" class="hidden">
+                <li><a href="index.html">FORSIDE</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li> <a href="catalogue.html">CATALOGUE</a></li>
+                <li> <a href="lookbook.html">LOOKBOOK</a></li>
+                <li> <a href="contact.html">CONTACT</a></li>
+                <li> <a href="stockists.html">STOCKISTS</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
 <body>
-    <header>
-        <div class="topnav">
-            <nav>
-                <a href="index.html">FORSIDE</a>
-                <a href="about.html">ABOUT US</a>
-                <a href="catalogue.html">CATALOGUE</a>
-                <a href="lookbook.html">LOOKBOOK</a>
-                <a href="contact.html">CONTACT</a>
-                <a href="stockists.html">STOCKISTS</a>
-            </nav>
-        </div>
-        <!--burger menu-->
-        <div class="burgermenu">
-            <nav>
-                <div id="menuknap">☰</div>
-                <ul id="menu" class="hidden">
-                    <li><a href="index.html">FORSIDE</a></li>
-                    <li><a href="about.html">ABOUT US</a></li>
-                    <li> <a href="catalogue.html">CATALOGUE</a></li>
-                    <li> <a href="lookbook.html">LOOKBOOK</a></li>
-                    <li> <a href="contact.html">CONTACT</a></li>
-                    <li> <a href="stockists.html">STOCKISTS</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+
+    <div class="overskriftcontact">
+        <img src="img/logoblack.png" alt="">
+        <h2 class="tlo">Contact</h2>
 
 
-    <script src="script.js"></script>
+
+    </div>
+
+    <div class="gridcontact">
+
+        <div class="ho">
+            <h3>HEAD OFFICE</h3>
+            <h4>Falstervej12, 2000 Frederiksberg</h4>
+        </div>
+
+        <div class="ws">
+            <h3>WHOLE SALES</h3>
+            <h4>sale@theleftovers.com</h4>
+        </div>
+
+        <div class="lo">
+            <h3>GENERAL</h3>
+            <h4>Info@theleftovers.com</h4>
+        </div>
+
+        <div class="press">
+            <h3>PRESS</h3>
+            <h4>Instagram</h4>
+        </div>
+    </div>
+
+
+
 </body>
-
-</html>
+<script src="script.js"></script></html>
