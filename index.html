@@ -7,76 +7,77 @@
     <title></title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .header_img img {
+        #index .header_img img {
             z-index: -1;
         }
 
-        .header_img {
+        #index .header_img {
             width: 100vw;
             height: 100vh;
             top: 0rem;
             position: relative;
         }
 
-        .video {
+        #index .video {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        .splash_text {
-            text-align: center;
-            position: absolute;
+        #index .splash_text {
+            text-align: end;
+            margin-left: 900px;
             color: white;
             font-size: 45px;
             text-shadow: 0 0 9px black;
+            z-index: 1;
+            position: fixed;
+            top: 500px;
         }
     </style>
 </head>
 
 <body>
+    <section id="index">
+        <img class="logo" src="logo/LOGO-a_yellow.png" onclick="window.location.href='index.html'" alt="leftover logo">
 
-    <img class="logo" src="logo/LOGO-a_yellow.png" onclick="window.location.href='index.html'" alt="leftover logo">
+        <header>
+            <div class="topnav">
+                <nav>
+                    <a href="index.html">FORSIDE</a>
+                    <a href="about.html">ABOUT US</a>
+                    <a href="catalogue.html">CATALOGUE</a>
+                    <a href="lookbook.html">LOOKBOOK</a>
+                    <a href="contact.html">CONTACT</a>
+                    <a href="stockists.html">STOCKISTS</a>
+                </nav>
+            </div>
+            <!--burger menu-->
+            <div class="burgermenu">
+                <nav>
+                    <div id="menuknap">☰</div>
+                    <ul id="menu" class="hidden">
+                        <li><a href="index.html">FORSIDE</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                        <li> <a href="catalogue.html">CATALOGUE</a></li>
+                        <li> <a href="lookbook.html">LOOKBOOK</a></li>
+                        <li> <a href="contact.html">CONTACT</a></li>
+                        <li> <a href="stockists.html">STOCKISTS</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="splash_text">
+            <p>THE LEFTOVERS</p>
 
-    <header>
-        <div class="topnav">
-            <nav>
-                <a href="index.html">FORSIDE</a>
-                <a href="about.html">ABOUT US</a>
-                <a href="catalogue.html">CATALOGUE</a>
-                <a href="lookbook.html">LOOKBOOK</a>
-                <a href="contact.html">CONTACT</a>
-                <a href="stockists.html">STOCKISTS</a>
-            </nav>
+
         </div>
-        <!--burger menu-->
-        <div class="burgermenu">
-            <nav>
-                <div id="menuknap">☰</div>
-                <ul id="menu" class="hidden">
-                    <li><a href="index.html">FORSIDE</a></li>
-                    <li><a href="about.html">ABOUT US</a></li>
-                    <li> <a href="catalogue.html">CATALOGUE</a></li>
-                    <li> <a href="lookbook.html">LOOKBOOK</a></li>
-                    <li> <a href="contact.html">CONTACT</a></li>
-                    <li> <a href="stockists.html">STOCKISTS</a></li>
-                </ul>
-            </nav>
+        <div class="header_img">
+            <video class="header_img video" autoplay="" muted="" loop="" id="video">
+                <source src="video/test.mp4" type="video/mp4">
+            </video>
         </div>
-    </header>
 
-    <div class="header_img">
-        <video class="header_img video" autoplay="" muted="" loop="" id="video">
-            <source src="video/test.mp4" type="video/mp4">
-        </video>
-    </div>
-
-
-    <div class="splash_text">
-        <p>The Leftovers</p>
-
-
-    </div>
-
-    <script src="script.js"></script>
+        <script src="script.js"></script>
+    </section>
 </body></html>
