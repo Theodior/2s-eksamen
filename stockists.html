@@ -1,43 +1,134 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="da">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>stock</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
+<style>
+    .overskriftstok {
+        display: grid;
+        grid-template-columns: 26vw 20vw 15vw 30vw;
+        margin-bottom: 8vw;
+        margin-top: 4vw;
+
+
+    }
+
+    .overskriftstok img {
+        grid-column: 2;
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .overskriftstok h2 {
+        display: flex;
+        font-size: 2em;
+
+        align-items: center;
+    }
+
+    .gridstok {
+        display: grid;
+        grid-template-columns: 20vw 60vw 20vw;
+        grid-auto-rows: auto;
+
+
+    }
+
+    .ww {
+        grid-column: 2;
+        grid-row: 1;
+        text-align: center;
+
+
+    }
+
+    .stoy {
+        grid-column: 2;
+        grid-row: 2;
+        text-align: center;
+    }
+
+    .leftovers {
+        grid-column: 2;
+        grid-row: 3;
+        text-align: center;
+    }
+
+    .chho {
+        grid-column: 2;
+        grid-row: 4;
+        text-align: center;
+    }
+</style>
+
+
+<header>
+    <div class="topnav">
+        <nav>
+            <a href="index.html">FORSIDE</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="catalogue.html">CATALOGUE</a>
+            <a href="lookbook.html">LOOKBOOK</a>
+            <a href="contact.html">CONTACT</a>
+            <a href="stockists.html">STOCKISTS</a>
+        </nav>
+    </div>
+    <!--burger menu-->
+    <div class="burgermenu">
+        <nav>
+            <div id="menuknap">☰</div>
+            <ul id="menu" class="hidden">
+                <li><a href="index.html">FORSIDE</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li> <a href="catalogue.html">CATALOGUE</a></li>
+                <li> <a href="lookbook.html">LOOKBOOK</a></li>
+                <li> <a href="contact.html">CONTACT</a></li>
+                <li> <a href="stockists.html">STOCKISTS</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
 <body>
-    <header>
-        <div class="topnav">
-            <nav>
-                <a href="index.html">FORSIDE</a>
-                <a href="about.html">ABOUT US</a>
-                <a href="catalogue.html">CATALOGUE</a>
-                <a href="lookbook.html">LOOKBOOK</a>
-                <a href="contact.html">CONTACT</a>
-                <a href="stockists.html">STOCKISTS</a>
-            </nav>
+
+    <div class="overskriftstok">
+        <img src="img/logoblack.png" alt="">
+        <h2 class="tlo">Stockists</h2>
+    </div>
+    <h2>Denmark</h2>
+
+    <div class="gridstok">
+
+        <div class="ww">
+            <h3>Wood Wood</h3>
+            <h4>Grønnegade 1, 1107 København</h4>
         </div>
-        <!--burger menu-->
-        <div class="burgermenu">
-            <nav>
-                <div id="menuknap">☰</div>
-                <ul id="menu" class="hidden">
-                    <li><a href="index.html">FORSIDE</a></li>
-                    <li><a href="about.html">ABOUT US</a></li>
-                    <li> <a href="catalogue.html">CATALOGUE</a></li>
-                    <li> <a href="lookbook.html">LOOKBOOK</a></li>
-                    <li> <a href="contact.html">CONTACT</a></li>
-                    <li> <a href="stockists.html">STOCKISTS</a></li>
-                </ul>
-            </nav>
+
+        <div class="stoy">
+            <h3>Stoy</h3>
+            <h4>Store torv, 8000 Aarhus</h4>
         </div>
-    </header>
+
+        <div class="leftovers">
+            <h3>The leftovers</h3>
+            <h4>Falstervej 12, 2000 Frederiksberg</h4>
+        </div>
+
+        <div class="chho">
+            <h3>CHHO</h3>
+            <h4>Møllegade 18, kld 2200 Nørrebro</h4>
+        </div>
+    </div>
+
+    <footer>
+
+    </footer>
 
 
     <script src="script.js"></script>
-</body>
-
-</html>
+</body></html>
