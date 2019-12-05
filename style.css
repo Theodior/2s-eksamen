@@ -15,10 +15,13 @@ body {
     box-sizing: border-box;
 }
 
-header {
-    position: absolute;
-    right: 0;
-    z-index: 1;
+@media screen and (min-width:1000px) {
+
+    header {
+        position: absolute;
+        left: 0;
+        z-index: 1;
+    }
 }
 
 /** NAV & BURGERMENU **/
@@ -29,18 +32,18 @@ header {
     height: 65px;
     position: fixed;
     right: 93vw;
-    top: 0.5vw;
+    top: 1.5vw;
     cursor: pointer;
     z-index: 1;
 }
 
 nav a {
-    color: white;
+    color: black;
 }
 
 nav a:hover {
-    color: white;
-    text-shadow: 0 0 0.6px black;
+    color: #ffb100;
+    text-shadow: 0 0 0.6px #ffb100;
 }
 
 
@@ -107,8 +110,9 @@ nav a:hover {
     text-decoration: none;
     padding-left: 25px;
     padding-right: 2px;
-    font-size: 1.3rem;
+    font-size: 1rem;
     line-height: 80px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .topnav a:hover {

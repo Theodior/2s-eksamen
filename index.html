@@ -6,7 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto&display=swap" rel="stylesheet">
     <style>
+        /*MOBILE*/
+        #index .logo {
+            width: 65px;
+            height: 65px;
+            position: fixed;
+            right: 83vw;
+            top: 1.5vw;
+            cursor: pointer;
+            z-index: 1;
+        }
+
         #index .header_img img {
             z-index: -1;
         }
@@ -26,14 +38,68 @@
 
         #index .splash_text {
             text-align: end;
-            margin-left: 900px;
+            margin-left: 140px;
             color: white;
             font-size: 45px;
             text-shadow: 0 0 9px black;
             z-index: 1;
-            position: fixed;
+            position: absolute;
             top: 500px;
+            cursor: pointer;
         }
+
+        #index .splash_text p {
+            font-family: 'Bebas Neue', cursive;
+        }
+
+        /*DESKTOP*/
+        @media screen and (min-width:1000px) {
+            #index .logo {
+                width: 65px;
+                height: 65px;
+                position: fixed;
+                right: 4vw;
+                top: 1.5vw;
+                cursor: pointer;
+                z-index: 1;
+            }
+
+            #index .header_img img {
+                z-index: -1;
+            }
+
+            #index .header_img {
+                width: 100vw;
+                height: 100vh;
+                top: 0rem;
+                position: relative;
+            }
+
+            #index .video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            #index .splash_text {
+                text-align: end;
+                margin-left: 1000px;
+                color: white;
+                font-size: 45px;
+                text-shadow: 0 0 9px white;
+                position: fixed;
+                top: 500px;
+                cursor: pointer;
+                letter-spacing: 3px;
+            }
+
+            #index .splash_text p {
+                font-family: 'Bebas Neue', cursive;
+            }
+        }
+
+        /*TABLET*/
+        @media screen and (min-width:768px) {}
     </style>
 </head>
 
@@ -68,13 +134,15 @@
             </div>
         </header>
         <div class="splash_text">
-            <p>THE LEFTOVERS</p>
+            <a onclick="window.location.href='about.html'">
+                <p>THE LEFTOVERS</p>
+            </a>
 
 
         </div>
         <div class="header_img">
             <video class="header_img video" autoplay="" muted="" loop="" id="video">
-                <source src="video/test.mp4" type="video/mp4">
+                <source src="video/baggrundsvideo.mp4" type="video/mp4">
             </video>
         </div>
 
