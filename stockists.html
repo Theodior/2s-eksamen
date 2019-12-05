@@ -9,9 +9,13 @@
 </head>
 
 <style>
+    body {
+        background-color: whitesmoke;
+    }
+
     .overskriftstok {
         display: grid;
-        grid-template-columns: 26vw 20vw 15vw 30vw;
+        grid-template-columns: 25vw 21vw 29vw 25vw;
         margin-bottom: 8vw;
         margin-top: 4vw;
 
@@ -22,6 +26,8 @@
         grid-column: 2;
         width: 20vw;
         height: 20vw;
+        align-items: center;
+
     }
 
     .overskriftstok h2 {
@@ -81,6 +87,84 @@
         grid-row: 4;
         text-align: center;
     }
+
+
+    @media screen and (min-width:600px) {
+
+        body {
+            background-color: whitesmoke;
+        }
+
+        .gridstok {
+            grid-template-columns: 48vw;
+            48vw;
+        }
+
+        .leftovers {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .ww {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .chho {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+
+
+
+
+
+
+    }
+
+
+
+    @media screen and (min-width:850px) {
+        body {
+            background-color: whitesmoke;
+        }
+
+        .overskriftstok {
+            display: grid;
+            grid-template-columns: 30vw 20vw 20vw 30vw;
+            margin-bottom: 8vw;
+            margin-top: 4vw;
+
+
+        }
+
+        @media only screen and (min-width: 1110px) {
+
+            body {
+                background-color: whitesmoke;
+            }
+
+
+            .overskriftstok {
+                display: grid;
+                grid-template-columns: 37vw 13vw 25vw 25vw;
+                margin-bottom: 1vw;
+                margin-top: 6vw;
+
+
+            }
+
+
+            .overskriftstok img {
+                grid-column: 2;
+                width: 13vw;
+                height: 13vw;
+                align-items: center;
+
+            }
+
+        }
 </style>
 
 
