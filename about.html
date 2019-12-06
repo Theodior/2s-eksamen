@@ -17,280 +17,50 @@
         background-color: whitesmoke;
     }
 
-    .overskiftabout {
+    .gridabout {
         display: grid;
-        grid-template-columns: 26vw 20vw 15vw 30vw;
-        margin-bottom: 8vw;
-        margin-top: 4vw;
-
-
+        grid-template-columns: 50vw 50vw;
+        grid-template-rows: 70vw 10vw 10vw;
     }
 
-    .overskiftabout img {
+    .gridabout img {
+        width: 100vw;
+        height: 90vw;
+    }
+
+    .gridabout h2 {
+        color: red;
+    }
+
+    .abouth2 {
         grid-column: 2;
-        width: 20vw;
-        height: 20vw;
+        grid-row: 2;
     }
 
-    .overskiftabout h2 {
-        display: flex;
-        font-size: 2em;
-
-        align-items: center;
+    .tlo {
+        grid-row: 3;
+        grid-column: 2;
+        margin-top: 0px;
     }
 
+
+
+
+    .contentabout img {
+        width: 90vw;
+        height: 100vw;
+    }
+
+    .abouttxt {
+        margin: auto;
+        max-width: 70vw;
+    }
 
     .aboutvid {
-        display: flex;
         justify-content: center;
-        margin-bottom: 9vw;
-        margin-top: 9vw;
-    }
-
-    .abouttxt,
-    .abouttxt2 {
-        display: grid;
-        letter-spacing: 1px;
-        line-height: 20px;
-        margin: auto;
-        max-width: 80vw;
+        display: flex;
 
     }
-
-
-
-    /*Tablet*/
-
-    @media only screen and (min-width: 600px) {
-
-
-
-
-        .overskiftabout {
-            display: grid;
-            grid-template-columns: 30vw 20vw 20vw 30vw;
-            margin-bottom: 1em;
-
-
-
-        }
-
-        .overskiftabout img {
-
-
-            width: 20vw;
-            height: 20vw;
-
-
-
-
-
-        }
-
-
-        /*Sætter billedet i bunden */
-        .contentabout {
-            display: grid;
-            grid-template-rows: 40vw 50vw 70vw;
-            margin: 0px;
-        }
-
-        .aboutvid video {
-            height: 400px;
-            width: 530px;
-            grid-row: 3;
-            margin-bottom: 6vw
-        }
-
-
-
-        .abouttxt2 {
-            grid-row: 2;
-        }
-
-        /*flottere respons*/
-
-        @media only screen and (min-width: 680px) {
-
-
-
-            .contentabout {
-                display: grid;
-                grid-template-rows: 35vw 40vw 60vw;
-                margin: 0px;
-            }
-
-            .overskiftabout img {
-
-
-                width: 20vw;
-                height: 20vw;
-
-
-
-
-
-            }
-
-            /*flottere respons*/
-
-            @media only screen and (min-width: 720px) {
-
-
-                .contentabout {
-                    display: grid;
-                    grid-template-rows: 30vw 40vw 60vw;
-                    margin: 0px;
-                }
-
-
-            }
-
-
-
-
-
-
-
-
-
-            @media only screen and (min-width: 800px) {
-
-
-                .overskiftabout img {
-
-
-                    width: 20vw;
-                    height: 20vw;
-
-
-
-
-
-                }
-
-                .contentabout {
-                    display: grid;
-                    grid-template-rows: 22vw 30vw 60vw;
-                    margin: 0px;
-                }
-
-
-
-
-
-            }
-
-            /*flottere respons*/
-
-
-            @media only screen and (min-width: 980px) {
-
-
-                .overskiftabout img {
-
-
-                    width: 15vw;
-                    height: 15vw;
-
-
-
-
-
-                }
-
-                .contentabout {
-                    display: grid;
-                    grid-template-rows: 20vw 20vw 50vw;
-
-                    margin-right: 20vw;
-                    margin-left: 20vw;
-                }
-
-
-
-
-
-            }
-
-            /*Laptop*/
-
-            @media only screen and (min-width: 1110px) {
-
-
-                .overskiftabout {
-                    display: grid;
-                    grid-template-columns: 35vw 16vw 20vw 30vw;
-                    margin-bottom: 2vw;
-                    margin-top: 4vw;
-
-                }
-
-                .overskiftabout h2 {
-                    font-size: 3em;
-                }
-
-                .overskiftabout img {
-
-
-                    width: 13vw;
-                    height: 13vw;
-
-
-
-
-
-                }
-
-                /*grid i laptop*/
-
-                .aboutvid video {
-                    display: grid;
-                    height: 450px;
-                    width: 780px;
-
-                    margin-top: 0px;
-
-                }
-
-                .contentabout {
-                    display: grid;
-                    grid-template-rows: 15vw 15vw 38vw;
-                    grid-template-columns: 20vw 60vw 20vw;
-                    margin: 0;
-                }
-
-                .abouttxt {
-                    grid-row: 1;
-                    grid-column: 2/ span 1;
-
-
-                }
-
-                .abouttxt2 {
-                    grid-row: 2;
-                    grid-column: 2/ span 1;
-
-
-                }
-
-                .aboutvid {
-
-                    grid-row: 3;
-                    grid-column: 2;
-                    margin-top: 2vw;
-                    margin-bottom: 0vw;
-
-                }
-
-
-
-
-
-
-
-
-            }
 </style>
 
 
@@ -326,9 +96,14 @@
     <section id="about">
 
 
-        <div class="overskiftabout">
-            <img src="img/logoblack.png" alt="">
-            <h2 class="tlo">About</h2>
+
+
+
+
+        <div class="gridabout">
+            <img src="img/logoblack.png" alt="mokey">
+            <h2 class="abouth2">About</h2>
+            <h2 class="tlo">The Leftovers</h2>
         </div>
 
         <div class="contentabout">
@@ -337,20 +112,27 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit tempora voluptas soluta dolorem unde. Sint quo magnam quibusdam doloremque temporibus at nobis suscipit ad est, qui dolorem cum, aliquid ipsa?
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab doloremque, debitis vel id amet tempore commodi! Suscipit necessitatibus, accusantium. Aperiam explicabo laborum eos neque harum odit repellendus rem, a iste?
             </div>
-            <div class="aboutvid">
-                <video width="320" height="240" controls>
-                    <source src="movie.mp4" type="video/mp4">
-                    <source src="movie.ogg" type="video/ogg">
-                    Your browser does not support the video tag.
-                </video> </div>
-            <div class="abouttxt2">
 
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptate ab unde facere hic atque earum impedit? Assumenda quos a iste iusto earum similique, repellendus et ullam cupiditate, officiis accusantium.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste reiciendis deleniti, distinctio, temporibus est laudantium facilis ratione. Aliquid repellat mollitia dolore optio laboriosam distinctio, necessitatibus id officiis, sit amet dolorum.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque architecto saepe in vitae reprehenderit quasi, asperiores maxime, sint cupiditate. Autem, soluta, illo. Quam, nemo inventore nesciunt sequi eveniet ducimus voluptates.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem pariatur odio facere fugiat illo, placeat nostrum eius eligendi libero nulla. Aperiam qui sunt maiores dolores aliquam omnis veritatis quaerat quis!
-            </div>
+            <img src="img/logoblack.png" alt="mokey">
         </div>
+
+        <div class="contentabout">
+            <div class="abouttxt">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste pariatur voluptates et, nam sunt iusto laborum ex optio rem animi facilis blanditiis fugit! Fugit accusantium, aperiam adipisci expedita, dignissimos
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit tempora voluptas soluta dolorem unde. Sint quo magnam quibusdam doloremque temporibus at nobis suscipit ad est, qui dolorem cum, aliquid ipsa?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab doloremque, debitis vel id amet tempore commodi! Suscipit necessitatibus, accusantium. Aperiam explicabo laborum eos neque harum odit repellendus rem, a iste?
+            </div>
+
+            <img src="img/logoblack.png" alt="mokey">
+        </div>
+
+        <div class="aboutvid">
+            <video width="320" height="240" controls>
+                <source src="movie.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+            </video> </div>
+
 
 
 
