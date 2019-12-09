@@ -19,12 +19,12 @@
 
     .gridabout {
         display: grid;
-        grid-template-columns: 50vw 50vw;
-        grid-template-rows: 70vw 10vw 10vw;
+        grid-template-columns: 48vw 48vw;
+        grid-template-rows: 65vw 10vw 10vw;
     }
 
     .gridabout img {
-        width: 100vw;
+        width: 96vw;
         height: 90vw;
     }
 
@@ -47,8 +47,9 @@
 
 
     .contentabout img {
-        width: 90vw;
+        width: 98vw;
         height: 100vw;
+        margin: 0px;
     }
 
     .abouttxt {
@@ -56,11 +57,116 @@
         max-width: 70vw;
     }
 
+
+    .contentabout2 img {
+        width: 98vw;
+        height: 100vw;
+        margin: 0px;
+    }
+
+    .abouttxt2 {
+        margin: auto;
+        max-width: 70vw;
+    }
+
+
     .aboutvid {
         justify-content: center;
         display: flex;
 
     }
+
+    @media screen and (min-width:650px) {
+
+        .contentabout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 2vw;
+            margin: auto;
+            max-width: 90vw;
+            margin-top: 3vw;
+        }
+
+        .contentabout img {
+            width: 34vw;
+            height: 40vw;
+        }
+
+        .contentabout2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 2vw;
+            margin: auto;
+            max-width: 90vw;
+            margin-top: 3vw;
+            margin-bottom: 3vw;
+        }
+
+        .contentabout2 img {
+            width: 34vw;
+            height: 40vw;
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        video {
+            width: 600px;
+            height: 400px;
+        }
+
+
+        .gridabout {
+            display: grid;
+            grid-template-columns: 70vw 30vw;
+        }
+
+        .gridabout img {
+            height: 85vw;
+            width: 85vw;
+        }
+
+
+
+
+
+
+
+
+    }
+
+    @media screen and (min-width:1050px) {
+
+        .gridabout {
+            grid-template-rows: 40vw 5vw 5vw;
+            margin-left: 5vw;
+        }
+
+        .gridabout img {
+            height: 50vw;
+            width: 80vw;
+
+        }
+
+        .abouttxt {
+            margin-left: 10vw;
+            margin-right: 10vw;
+            margin-top: 2vw;
+        }
+
+
+
+        .abouttxt2 {
+            margin-left: 10vw;
+            margin-right: 10vw;
+            margin-top: 2vw;
+        }
+
+        video {
+            width: 80vw;
+            height: 40vw;
+        }
+    }
+
 </style>
 
 
@@ -101,29 +207,32 @@
 
 
         <div class="gridabout">
-            <img src="img/logoblack.png" alt="mokey">
+            <img src="img/4th/img876.jpg" alt="mokey">
             <h2 class="abouth2">About</h2>
             <h2 class="tlo">The Leftovers</h2>
         </div>
 
         <div class="contentabout">
             <div class="abouttxt">
+                <h2 class="aboutover">The Leftovers</h2>
+
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste pariatur voluptates et, nam sunt iusto laborum ex optio rem animi facilis blanditiis fugit! Fugit accusantium, aperiam adipisci expedita, dignissimos
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit tempora voluptas soluta dolorem unde. Sint quo magnam quibusdam doloremque temporibus at nobis suscipit ad est, qui dolorem cum, aliquid ipsa?
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab doloremque, debitis vel id amet tempore commodi! Suscipit necessitatibus, accusantium. Aperiam explicabo laborum eos neque harum odit repellendus rem, a iste?
             </div>
 
-            <img src="img/logoblack.png" alt="mokey">
+            <img src="img/romeo.png" alt="mokey">
         </div>
 
-        <div class="contentabout">
-            <div class="abouttxt">
+        <div class="contentabout2">
+            <div class="abouttxt2">
+                <h2 class="aboutover">The Leftovers</h2>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste pariatur voluptates et, nam sunt iusto laborum ex optio rem animi facilis blanditiis fugit! Fugit accusantium, aperiam adipisci expedita, dignissimos
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit tempora voluptas soluta dolorem unde. Sint quo magnam quibusdam doloremque temporibus at nobis suscipit ad est, qui dolorem cum, aliquid ipsa?
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab doloremque, debitis vel id amet tempore commodi! Suscipit necessitatibus, accusantium. Aperiam explicabo laborum eos neque harum odit repellendus rem, a iste?
             </div>
 
-            <img src="img/logoblack.png" alt="mokey">
+            <img src="img/190811_TheLeftOvers_123_19.jpeg" alt="mokey">
         </div>
 
         <div class="aboutvid">
@@ -145,4 +254,6 @@
     </footer>
 
     <script src="script.js"></script>
-</body></html>
+</body>
+
+</html>

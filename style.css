@@ -140,18 +140,20 @@ nav a:hover {
 
 
 
-@media screen and (min-width:600px) {
+@media screen and (min-width:960px) {
     #menuknap {
         display: none;
     }
 }
 
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:960px) {
     .topnav {
         display: none;
     }
 }
+
+
 
 @media screen and (min-width:960px) {
 
