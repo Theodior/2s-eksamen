@@ -9,32 +9,27 @@
 </head>
 
 <style>
-    .overskriftkatalog {
-        display: grid;
-        grid-template-columns: 26vw 20vw 15vw 30vw;
-        margin-bottom: 8vw;
-        margin-top: 4vw;
-
-
+    #catalogue {
+        position: relative;
+        top: 150px;
     }
 
-    .overskriftkatalog img {
-        grid-column: 2;
-        width: 20vw;
-        height: 20vw;
+    .tom {
+        height: 25vw;
     }
 
     .overskriftkatalog h2 {
         display: flex;
         font-size: 2em;
+        justify-content: center;
 
-        align-items: center;
     }
 
 
     .liste img {
         width: 60vw;
         margin-left: 20px;
+        margin-top: 3vw;
 
 
     }
@@ -129,6 +124,36 @@
         background-color: #EDEDEF;
     }
 
+    .katalog_filter {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .katalog_filter button {
+        border: none;
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: snow;
+        color: black;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 22px;
+        transition-duration: 0.2s;
+        margin: 10px;
+
+        justify-content: center;
+        margin-bottom: 0vw;
+
+    }
+
+    .katalog_filter button:hover {
+        color: snow;
+        background-color: black;
+    }
+
+
+
 
     @media screen and (min-width:600px) {
 
@@ -171,6 +196,10 @@
 
 
     @media screen and (min-width:850px) {
+
+        .tom {
+            height: 20vw;
+        }
 
         .liste {
             display: grid;
@@ -236,7 +265,9 @@
     @media screen and (min-width:1110px) {
 
 
-
+        .tom {
+            height: 15vw;
+        }
 
         .overskiftkatalog h2 {
             display: flex;
@@ -261,12 +292,13 @@
         .katalog_filter button {
             border: none;
             display: inline-block;
-            padding: 20px 50px;
-            background-color: #1F92BF;
-            color: whitesmoke;
+            padding: 10px 20px;
+            background-color: snow;
+            color: black;
+
             text-align: center;
             cursor: pointer;
-            border-radius: 4px;
+            border-radius: 22px;
             transition-duration: 0.2s;
             margin: 20px;
 
@@ -276,8 +308,8 @@
         }
 
         .katalog_filter button:hover {
-            color: black;
-            background-color: whitesmoke;
+            color: snow;
+            background-color: black;
         }
 
 
@@ -403,54 +435,55 @@
 </header>
 
 <body>
+    <section id="catalogue">
+
+
+        <div class="overskriftkatalog">
+            <h2 class="tlo">Catalogue</h2>
+        </div>
+
+        <div class="katalog_filter">
+            <button class="filter valgt" data-kategori="Alle">Everything</button>
+            <button class="filter" data-kategori="T-Shirt">T-Shirts</button>
+            <button class="filter" data-kategori="Hoodie">Hoodies</button>
+            <button class="filter" data-kategori="Bag">Bags</button>
+        </div>
 
 
 
-    <div class="overskriftkatalog">
-        <img src="img/logoblack.png" alt="">
-        <h2 class="tlo">Catalogue</h2>
-    </div>
+        <div id="single">
+            <section class="liste">
+                <article class="beskrivelse">
 
-    <div class="katalog_filter">
-        <button class="filter valgt" data-kategori="Alle">Everything</button>
-        <button class="filter" data-kategori="T-Shirt">T-Shirts</button>
-        <button class="filter" data-kategori="Hoodie">Hoodies</button>
-        <button class="filter" data-kategori="Bag">Bags</button>
-    </div>
+                    <img class="billede" src="" alt="">
+                    <h2></h2>
+
+                    <p class="pris">kr</p>
+                </article>
+
+            </section>
+
+        </div>
+
+        <template>
+            <article class="katalog">
+
+                <div class="hove">
+                    <img src="" alt="">
+                    <h2 class="title"></h2>
+
+                    <div class="beskrivelse"></div>
 
 
 
-    <div id="single">
-        <section class="liste">
-            <article class="beskrivelse">
+                </div>
 
-                <img class="billede" src="" alt="">
-                <h2></h2>
 
-                <p class="pris">kr</p>
             </article>
+        </template>
+    </section>
 
-        </section>
-
-    </div>
-
-    <template>
-        <article class="katalog">
-
-            <div class="hove">
-                <img src="" alt="">
-                <h2 class="title"></h2>
-
-                <div class="beskrivelse"></div>
-
-
-
-            </div>
-
-
-        </article>
-    </template>
-
+    <div class="tom"></div>
 
     <footer>
 
