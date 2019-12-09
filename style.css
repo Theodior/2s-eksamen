@@ -68,7 +68,7 @@ nav a:hover {
 #menuknap {
     font-size: 1.5em;
     cursor: pointer;
-    color: white;
+    color: #ff9300;
     position: absolute;
     top: 3vw;
     right: 4vw;
