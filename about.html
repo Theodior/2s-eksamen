@@ -17,6 +17,7 @@
 
     body {
         background-color: whitesmoke;
+        margin: 0px;
     }
 
     #abo .logo {
@@ -31,19 +32,20 @@
 
     .gridabout {
         display: grid;
-        grid-template-columns: 48vw 48vw;
+        grid-template-columns: 58vw 38vw;
         grid-template-rows: 65vw 10vw 10vw;
+        margin-bottom: 10vw;
     }
 
     .gridabout img {
         position: relative;
-        top: 51px;
+
         width: 96vw;
         height: 90vw;
     }
 
     .gridabout h2 {
-        color: red;
+        color: snow;
         z-index: 1;
     }
 
@@ -62,9 +64,12 @@
 
 
     .contentabout img {
+        display: flex;
         width: 98vw;
         height: 100vw;
-        margin: 0px;
+        margin: auto;
+        max-width: 70vw;
+        justify-content: center;
     }
 
     .abouttxt {
@@ -74,9 +79,13 @@
 
 
     .contentabout2 img {
+        display: flex;
         width: 98vw;
         height: 100vw;
-        margin: 0px;
+        margin: auto;
+        max-width: 70vw;
+        justify-content: center;
+        margin-bottom: 6vw;
     }
 
     .abouttxt2 {
@@ -89,6 +98,15 @@
         justify-content: center;
         display: flex;
 
+
+
+    }
+
+    video {
+        height: 50vw;
+        width: 98vw;
+        margin: auto;
+        max-width: 70vw;
     }
 
     @media screen and (min-width:650px) {
@@ -190,7 +208,6 @@
             height: 40vw;
         }
     }
-
 </style>
 
 
@@ -231,7 +248,7 @@
 
 
         <div class="gridabout">
-            <img src="img/4th/img876.jpg" alt="mokey">
+            <img src="img/img876.jpg" alt="mokey">
             <h2 class="abouth2">About</h2>
             <h2 class="tlo">The Leftovers</h2>
         </div>
@@ -278,6 +295,4 @@
     </footer>
 
     <script src="script.js"></script>
-</body>
-
-</html>
+</body></html>
