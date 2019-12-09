@@ -6,9 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        #look {
+            background-color: whitesmoke;
+        }
+
+        #lookbook .overskrift {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 200px;
+        }
+
+        .picone,
+        .pictwo,
+        .picthree {
+            position: relative;
+            top: 200px;
+            margin-left: 2rem;
+        }
+
+        .one {
+            height: 600px;
+        }
+
+        .two {
+            height: 600px;
+        }
+
+        .three {
+            height: 316px;
+
+
+        }
+
+        @media screen and (min-width:1000px) {
+            #lookbook .overskrift {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                top: 200px;
+            }
+
+            .picone {
+                display: flex;
+                justify-content: flex-end;
+                position: relative;
+                top: 250px;
+                margin-right: 2rem;
+            }
+
+            .one {
+                height: 600px;
+            }
+
+            .two {
+                margin-left: 2rem;
+                height: 600px;
+            }
+
+            .picthree {
+                display: flex;
+                position: relative;
+                top: -900px;
+                margin-right: 2rem;
+            }
+
+            .three {
+                height: 400px;
+                margin-left: 19rem;
+
+            }
+        }
+    </style>
 </head>
 
-<body>
+<body id="look">
     <header>
         <div class="topnav">
             <nav>
@@ -35,9 +108,27 @@
             </nav>
         </div>
     </header>
+    <section id="lookbook">
+        <div class="overskrift">
+            <h2 class="lookbookh2">LOOKBOOK</h2>
+        </div>
+        <div class="picone">
+            <img class="one" src="img/2nd/img895.jpg" alt="one">
+
+        </div>
+
+        <div class="pictwo">
+            <img class="two" src="img/1st/img914.jpg" alt="one">
+
+        </div>
+
+        <div class="picthree">
+            <img class="three" src="img/2nd/img900.jpg" alt="one">
+
+        </div>
+    </section>
 
 
+    <footer></footer>
     <script src="script.js"></script>
-</body>
-
-</html>
+</body></html>

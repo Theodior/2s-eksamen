@@ -13,28 +13,36 @@
         background-color: whitesmoke;
     }
 
-    .overskriftstok {
-        display: grid;
-        grid-template-columns: 25vw 21vw 29vw 25vw;
-        margin-bottom: 8vw;
-        margin-top: 4vw;
+    #stocki {
+        position: relative;
+        top: 100px;
+    }
 
+    .overskriftstok {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 30px;
 
     }
 
-    .overskriftstok img {
+    /*.overskriftstok img {
         grid-column: 2;
         width: 20vw;
         height: 20vw;
         align-items: center;
 
+    }*/
+    .whitesmoke {
+        height: 150px;
+        background-color: whitesmoke;
     }
 
     .overskriftstok h2 {
+        grid-column: 2;
         display: flex;
         font-size: 2em;
-
-        align-items: center;
+        text-align: center;
     }
 
     .h2stok {
@@ -131,11 +139,10 @@
         }
 
         .overskriftstok {
-            display: grid;
-            grid-template-columns: 30vw 20vw 20vw 30vw;
-            margin-bottom: 8vw;
-            margin-top: 4vw;
-
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 100px;
 
         }
 
@@ -147,22 +154,22 @@
 
 
             .overskriftstok {
-                display: grid;
-                grid-template-columns: 37vw 13vw 25vw 25vw;
-                margin-bottom: 1vw;
-                margin-top: 6vw;
+                display: flex;
+                justify-content: center;
+                position: relative;
+                top: 40px;
 
 
             }
 
 
-            .overskriftstok img {
+            /*.overskriftstok img {
                 grid-column: 2;
                 width: 13vw;
                 height: 13vw;
                 align-items: center;
 
-            }
+            }*/
 
         }
 </style>
@@ -196,39 +203,40 @@
 </header>
 
 <body>
-
-    <div class="overskriftstok">
-        <img src="img/logoblack.png" alt="">
-        <h2 class="tlo">Stockists</h2>
-    </div>
-
-    <div class="h2stok">
-        <h2>Denmark</h2>
-    </div>
-
-    <div class="gridstok">
-
-        <div class="ww">
-            <h3>Wood Wood</h3>
-            <h4>Grønnegade 1, 1107 København</h4>
+    <section id="stocki">
+        <div class="overskriftstok">
+            <img src="" alt="">
+            <h2 class="tlo">Stockists</h2>
         </div>
 
-        <div class="stoy">
-            <h3>Stoy</h3>
-            <h4>Store torv, 8000 Aarhus</h4>
+        <div class="h2stok">
+            <h2>Denmark</h2>
         </div>
 
-        <div class="leftovers">
-            <h3>The leftovers</h3>
-            <h4>Falstervej 12, 2000 Frederiksberg</h4>
-        </div>
+        <div class="gridstok">
 
-        <div class="chho">
-            <h3>CHHO</h3>
-            <h4>Møllegade 18, kld 2200 Nørrebro</h4>
-        </div>
-    </div>
+            <div class="ww">
+                <h3>Wood Wood</h3>
+                <h4>Grønnegade 1, 1107 København</h4>
+            </div>
 
+            <div class="stoy">
+                <h3>Stoy</h3>
+                <h4>Store torv, 8000 Aarhus</h4>
+            </div>
+
+            <div class="leftovers">
+                <h3>The leftovers</h3>
+                <h4>Falstervej 12, 2000 Frederiksberg</h4>
+            </div>
+
+            <div class="chho">
+                <h3>CHHO</h3>
+                <h4>Møllegade 18, kld 2200 Nørrebro</h4>
+            </div>
+        </div>
+        <div class="whitesmoke"></div>
+    </section>
     <footer>
 
     </footer>
