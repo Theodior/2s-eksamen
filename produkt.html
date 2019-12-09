@@ -9,6 +9,16 @@
 </head>
 
 <style>
+    #pro .logo {
+        width: 65px;
+        height: 65px;
+        position: fixed;
+        right: 83vw;
+        top: 1.5vw;
+        cursor: pointer;
+        z-index: 1;
+    }
+
     .infoCykler img {
         width: 80vw;
         height: 60vw;
@@ -32,7 +42,7 @@
         font-size: 16px;
         cursor: pointer;
         margin-left: 3vw;
-        margin-top: 12vw;
+        margin-top: 20vw;
     }
 
     .luk:hover {
@@ -87,6 +97,16 @@
     }
 
     @media screen and (min-width:1160px) {
+
+        #pro .logo {
+            width: 65px;
+            height: 65px;
+            position: fixed;
+            right: 4vw;
+            top: 1.5vw;
+            cursor: pointer;
+            z-index: 1;
+        }
 
         .indhold {
             position: relative;
@@ -165,7 +185,6 @@
 
 
     }
-
 </style>
 
 <body>
@@ -197,8 +216,11 @@
     </header>
 
 
+    <section id="pro">
 
+        <img class="logo" src="logo/1x/black-theleft-8.png" onclick="window.location.href='index.html'" alt="leftover logo">
 
+    </section>
 
     <main id="single">
         <button class="luk">Tilbage</button>
@@ -270,8 +292,5 @@
         document.querySelector(".luk").addEventListener("click", () => {
             history.back();
         })
-
     </script>
-</body>
-
-</html>
+</body></html>
