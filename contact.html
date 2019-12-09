@@ -13,6 +13,16 @@
         background-color: whitesmoke;
     }
 
+    #cont .logo {
+        width: 65px;
+        height: 65px;
+        position: fixed;
+        right: 83vw;
+        top: 1.5vw;
+        cursor: pointer;
+        z-index: 1;
+    }
+
     #cont {
         position: relative;
         top: 80px;
@@ -75,6 +85,16 @@
     }
 
     @media screen and (min-width:1000px) {
+        #cont .logo {
+            width: 65px;
+            height: 65px;
+            position: fixed;
+            right: 4vw;
+            top: 1.5vw;
+            cursor: pointer;
+            z-index: 1;
+        }
+
         #cont {
             position: relative;
             top: 90px;
@@ -86,6 +106,7 @@
 
 
     }
+
 </style>
 
 
@@ -118,6 +139,8 @@
 
 <body>
     <section id="cont">
+
+        <img class="logo" src="logo/1x/shadow-star-8.png" onclick="window.location.href='index.html'" alt="leftover logo">
 
         <div class="overskriftcontact">
 
@@ -159,4 +182,6 @@
 
 
 
-</body></html>
+</body>
+
+</html>

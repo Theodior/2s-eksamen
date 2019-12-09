@@ -14,6 +14,16 @@
         top: 150px;
     }
 
+    #cata .logo {
+        width: 65px;
+        height: 65px;
+        position: fixed;
+        right: 83vw;
+        top: 1.5vw;
+        cursor: pointer;
+        z-index: 1;
+    }
+
     .tom {
         height: 25vw;
     }
@@ -196,6 +206,16 @@
 
 
     @media screen and (min-width:850px) {
+
+        #cata .logo {
+            width: 65px;
+            height: 65px;
+            position: fixed;
+            right: 4vw;
+            top: 1.5vw;
+            cursor: pointer;
+            z-index: 1;
+        }
 
         .tom {
             height: 20vw;
@@ -434,9 +454,10 @@
     </div>
 </header>
 
-<body>
+<body id="cata">
     <section id="catalogue">
 
+        <img class="logo" src="logo/1x/shadow-star-8.png" onclick="window.location.href='index.html'" alt="leftover logo">
 
         <div class="overskriftkatalog">
             <h2 class="tlo">Catalogue</h2>

@@ -11,6 +11,16 @@
             background-color: whitesmoke;
         }
 
+        #lookbook .logo {
+            width: 65px;
+            height: 65px;
+            position: fixed;
+            right: 83vw;
+            top: 1.5vw;
+            cursor: pointer;
+            z-index: 1;
+        }
+
         #lookbook .overskrift {
             display: flex;
             justify-content: center;
@@ -41,6 +51,17 @@
         }
 
         @media screen and (min-width:1000px) {
+
+            #lookbook .logo {
+                width: 65px;
+                height: 65px;
+                position: fixed;
+                right: 4vw;
+                top: 1.5vw;
+                cursor: pointer;
+                z-index: 1;
+            }
+
             #lookbook .overskrift {
                 display: flex;
                 justify-content: center;
@@ -78,6 +99,7 @@
 
             }
         }
+
     </style>
 </head>
 
@@ -109,6 +131,9 @@
         </div>
     </header>
     <section id="lookbook">
+
+        <img class="logo" src="logo/1x/shadow-star-8.png" onclick="window.location.href='index.html'" alt="leftover logo">
+
         <div class="overskrift">
             <h2 class="lookbookh2">LOOKBOOK</h2>
         </div>
@@ -131,4 +156,6 @@
 
     <footer></footer>
     <script src="script.js"></script>
-</body></html>
+</body>
+
+</html>

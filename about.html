@@ -19,6 +19,16 @@
         background-color: whitesmoke;
     }
 
+    #abo .logo {
+        width: 65px;
+        height: 65px;
+        position: fixed;
+        right: 83vw;
+        top: 1.5vw;
+        cursor: pointer;
+        z-index: 1;
+    }
+
     .gridabout {
         display: grid;
         grid-template-columns: 48vw 48vw;
@@ -140,6 +150,15 @@
     }
 
     @media screen and (min-width:1050px) {
+        #abo .logo {
+            width: 65px;
+            height: 65px;
+            position: fixed;
+            right: 4vw;
+            top: 1.5vw;
+            cursor: pointer;
+            z-index: 1;
+        }
 
         .gridabout {
             grid-template-rows: 40vw 5vw 5vw;
@@ -201,12 +220,12 @@
     </div>
 </header>
 
-<body>
+<body id="abo">
 
     <section id="about">
 
 
-
+        <img class="logo" src="logo/1x/shadow-star-8.png" onclick="window.location.href='index.html'" alt="leftover logo">
 
 
 

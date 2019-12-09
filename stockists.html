@@ -13,6 +13,16 @@
         background-color: whitesmoke;
     }
 
+    #stocki .logo {
+        width: 65px;
+        height: 65px;
+        position: fixed;
+        right: 83vw;
+        top: 1.5vw;
+        cursor: pointer;
+        z-index: 1;
+    }
+
     #stocki {
         position: relative;
         top: 100px;
@@ -138,6 +148,16 @@
             background-color: whitesmoke;
         }
 
+        #stocki .logo {
+            width: 65px;
+            height: 65px;
+            position: fixed;
+            right: 4vw;
+            top: 1.5vw;
+            cursor: pointer;
+            z-index: 1;
+        }
+
         .overskriftstok {
             display: flex;
             justify-content: center;
@@ -172,6 +192,7 @@
             }*/
 
         }
+
 </style>
 
 
@@ -204,6 +225,8 @@
 
 <body>
     <section id="stocki">
+        <img class="logo" src="logo/1x/shadow-star-8.png" onclick="window.location.href='index.html'" alt="leftover logo">
+
         <div class="overskriftstok">
             <img src="" alt="">
             <h2 class="tlo">Stockists</h2>
@@ -244,4 +267,6 @@
 
 
     <script src="script.js"></script>
-</body></html>
+</body>
+
+</html>
