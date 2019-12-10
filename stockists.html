@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    body {
+        background-color: whitesmoke;
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+    .stockist {
+        grid-area: indhold;
+    }
+
+    #stockist_container {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "indhold"
+            "footer";
+    }
+
+
+
+    #stockist_container .stockist {
+        display: grid;
+        width: 100%;
+        /*max-width: 90vw;*/
+        grid-template-areas:
+            " sh2 "
+            " s_p "
+            " s_p2 "
+            " footer ";
+
+    }
+
+    #stockist_container .stockist .stockist_h2 {
+        grid-area: sh2;
+        text-align: center;
+        font-size: 3rem;
+        padding-top: 15vh;
+        padding-bottom: 5vh;
+
+    }
+
+    #stockist_container .stockist .stockist_p {
+        grid-area: s_p;
+        text-align: center;
+        font-size: 3rem;
+
+    }
+
+    #stockist_container .stockist .stockist_p2 {
+        grid-area: s_p2;
+        text-align: center;
+        font-size: 3rem;
+
+    }
+
+    #stockist_container .logo {
+        width: 65px;
+        height: 65px;
+        position: fixed;
+        right: 83vw;
+        top: 1.5vw;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .whitesmoke {
+        height: 19vw;
+        background-color: whitesmoke;
+    }
+
+
+    /***********   DESKTOP *********/
+
+
+    @media screen and (min-width:1000px) {
+
+
+
+        body {
+            background-color: whitesmoke;
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        .stockist {
+            grid-area: indhold;
+        }
+
+        #stockist_container {
+            display: grid;
+            grid-template-areas:
+                "header"
+                "indhold"
+                "footer";
+        }
+
+        #stockist_container .stockist {
+            display: grid;
+            width: 100%;
+            /*max-width: 90vw;*/
+            grid-template-areas:
+                " sh2 sh2 "
+                " s_p s_p2 "
+                " footer footer ";
+
+        }
+
+        #stockist_container .stockist .stockist_h2 {
+            grid-area: sh2;
+            text-align: center;
+            font-size: 3rem;
+            padding-top: 15vh;
+            padding-bottom: 5vh;
+
+        }
+
+        #stockist_container .stockist .stockist_p {
+            grid-area: s_p;
+            font-size: 3rem;
+            margin-right: 20vw;
+
+        }
+
+        #stockist_container .stockist .stockist_p2 {
+            grid-area: s_p2;
+            font-size: 3rem;
+            margin-right: 8vw;
+
+        }
+
+        #stockist_container .logo {
+            width: 65px;
+            height: 65px;
+            position: fixed;
+            left: 93vw;
+            top: 1.5vw;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .whitesmoke {
+            height: 16vw;
+            background-color: whitesmoke;
+        }
+
+
+
+
+    }
+
+</style>
+
+<body id="stockist_container">
+    <header>
+        <img class="logo" src="logo/1x/black-theleft-8.png" onclick="window.location.href='index.html'" alt="leftover logo">
+
+        <div class="topnav">
+            <nav>
+                <a href="index.html">FORSIDE</a>
+                <a href="about.html">ABOUT US</a>
+                <a href="catalogue.html">CATALOGUE</a>
+                <a href="lookbook.html">LOOKBOOK</a>
+                <a href="contact.html">CONTACT</a>
+                <a href="stockists.html">STOCKISTS</a>
+            </nav>
+        </div>
+        <!--burger menu-->
+        <div class="burgermenu">
+            <nav>
+                <div id="menuknap">☰</div>
+                <ul id="menu" class="hidden">
+                    <li><a href="index.html">FORSIDE</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li> <a href="catalogue.html">CATALOGUE</a></li>
+                    <li> <a href="lookbook.html">LOOKBOOK</a></li>
+                    <li> <a href="contact.html">CONTACT</a></li>
+                    <li> <a href="stockists.html">STOCKISTS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="stockist">
+        <h2 class="stockist_h2">Stockist</h2>
+        <p class="stockist_p">
+            COPENHAGEN
+        </p>
+
+        <p class="stockist_p2">
+            AARHUS
+        </p>
+        <div class="whitesmoke"></div>
+    </section>
+
+    <footer></footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
