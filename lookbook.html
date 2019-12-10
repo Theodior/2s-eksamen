@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="">
+<!-- Denne side er en single view page hard wired til at vise cykel post fra læerer Klaus wp side id nr 221  -->
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>LOOKBOOK</title>
     <link rel="stylesheet" href="style.css">
     <style>
         #look {
+            font-family: sans-serif;
+            display: grid;
             background-color: whitesmoke;
+
+
         }
 
-        #lookbook .logo {
+        .empty {
+            height: 15vw;
+        }
+
+        #look .logo {
             width: 65px;
             height: 65px;
             position: fixed;
@@ -21,38 +30,94 @@
             z-index: 1;
         }
 
-        #lookbook .overskrift {
+
+        main {
+            /*            width: 50vw;*/
+        }
+
+        /* Her starter karrusel   styles   */
+        .carousel {
+            /*  Denne hoved container indeholder 3 elementer .bwd   .pics_container og .fwd for at få dem vandret får de en gang flex         */
+            display: flex;
+            /*  Karrusellen skal fylde helt ud i det element ve putter den ind i fx et grid*/
+            width: 50%;
+
+        }
+
+        .pics_container {
+            /* Dette element er "hullet vi kigger igennem ind på strimlen af billeder"*/
+            overflow: hidden;
+
+        }
+
+
+        .over_skrift {
             display: flex;
             justify-content: center;
+        }
+
+        .pics {
+            /* Hvis ikke sætter left til 0, kører  den første animation ikke, da det er left vores transition animerer  */
+            left: 0;
+            /*Vi kan ikke animere positioner uden at gøre elementet positaion relative*/
             position: relative;
-            top: 200px;
+            /* Vi vil gerene have rækken af billeder centreret i "hullet vi kigger igennem, man kunne også flex-start fx" */
+            display: flex;
+            align-items: center;
+            /*Det et denne transition der gør at karrusellen ikke bare hopper fra det ene billede til det næste*/
+            transition: all 1s;
+
+            /*Dette element skal have antallet af billeder gange 100% som width, men da antallet af billeder jo varierer er dette flyttet ned i javaScriptet             */
         }
 
-        .picone,
-        .pictwo,
-        .picthree {
-            position: relative;
-            top: 200px;
-            margin-left: 2rem;
+        .img_container {
+            /* Hvert img ligger i en img_container - det virker ikke uden  */
+            width: 100%;
+
         }
 
-        .one {
-            height: 600px;
+        img {
+            /* En klassiker*/
+            width: 100%;
         }
 
-        .two {
-            height: 600px;
+        .fwd,
+        .bwd {
+            font-size: 48px;
+            width: 48px;
+            /* Flex for at centrere frem og tilbage pilene i højden */
+            display: flex;
+            align-items: center;
+            /* Vi kan  jo klikke på dem så pointer!     */
+            cursor: pointer;
+            color: #000000;
+
         }
 
-        .three {
-            height: 316px;
+        .fwd {
+            /* fwd knappen skal lægge sig mod højre, hvis man gør font størrelsen meget lille på den, vil det blive et problem uden flex-end          */
+            justify-content: flex-end;
+            margin-left: 1rem;
+        }
 
+        .bwd {
+            margin-right: 1rem;
+        }
 
+        .radio_btn_container {
+            /*Containeren til kanpperne i bunden, de skal sidde i midten*/
+            display: flex;
+            justify-content: center;
+        }
+
+        .radioBTN {
+            /* Vi kan  jo klikke på dem så pointer!     */
+            cursor: pointer;
         }
 
         @media screen and (min-width:1000px) {
 
-            #lookbook .logo {
+            #look .logo {
                 width: 65px;
                 height: 65px;
                 position: fixed;
@@ -61,101 +126,244 @@
                 cursor: pointer;
                 z-index: 1;
             }
-
-            #lookbook .overskrift {
-                display: flex;
-                justify-content: center;
-                position: relative;
-                top: 200px;
-            }
-
-            .picone {
-                display: flex;
-                justify-content: flex-end;
-                position: relative;
-                top: 250px;
-                margin-right: 2rem;
-            }
-
-            .one {
-                height: 600px;
-            }
-
-            .two {
-                margin-left: 2rem;
-                height: 600px;
-            }
-
-            .picthree {
-                display: flex;
-                position: relative;
-                top: -900px;
-                margin-right: 2rem;
-            }
-
-            .three {
-                height: 400px;
-                margin-left: 19rem;
-
-            }
         }
-
     </style>
+
+
 </head>
 
+<header>
+    <div class="topnav">
+        <nav>
+            <a href="index.html">FORSIDE</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="catalogue.html">CATALOGUE</a>
+            <a href="lookbook.html">LOOKBOOK</a>
+            <a href="contact.html">CONTACT</a>
+            <a href="stockists.html">STOCKISTS</a>
+        </nav>
+    </div>
+    <!--burger menu-->
+    <div class="burgermenu">
+        <nav>
+            <div id="menuknap">☰</div>
+            <ul id="menu" class="hidden">
+                <li><a href="index.html">FORSIDE</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li> <a href="catalogue.html">CATALOGUE</a></li>
+                <li> <a href="lookbook.html">LOOKBOOK</a></li>
+                <li> <a href="contact.html">CONTACT</a></li>
+                <li> <a href="stockists.html">STOCKISTS</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
 <body id="look">
-    <header>
-        <div class="topnav">
-            <nav>
-                <a href="index.html">FORSIDE</a>
-                <a href="about.html">ABOUT US</a>
-                <a href="catalogue.html">CATALOGUE</a>
-                <a href="lookbook.html">LOOKBOOK</a>
-                <a href="contact.html">CONTACT</a>
-                <a href="stockists.html">STOCKISTS</a>
-            </nav>
-        </div>
-        <!--burger menu-->
-        <div class="burgermenu">
-            <nav>
-                <div id="menuknap">☰</div>
-                <ul id="menu" class="hidden">
-                    <li><a href="index.html">FORSIDE</a></li>
-                    <li><a href="about.html">ABOUT US</a></li>
-                    <li> <a href="catalogue.html">CATALOGUE</a></li>
-                    <li> <a href="lookbook.html">LOOKBOOK</a></li>
-                    <li> <a href="contact.html">CONTACT</a></li>
-                    <li> <a href="stockists.html">STOCKISTS</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <section id="lookbook">
+    <img class="logo" src="logo/1x/black-theleft-8.png" onclick="window.location.href='index.html'" alt="leftover logo">
 
-        <img class="logo" src="logo/1x/black-theleft-8.png" onclick="window.location.href='index.html'" alt="leftover logo">
+    <div class="empty">
 
-        <div class="overskrift">
-            <h2 class="lookbookh2">LOOKBOOK</h2>
-        </div>
-        <div class="picone">
-            <img class="one" src="img/2nd/img895.jpg" alt="one">
+    </div>
+    <!-- Templaten vi kloner ind i pics elementet  -->
+    <template>
+        <article class="img_container">
+            <img src="" alt="">
+        </article>
+    </template>
 
-        </div>
+    <h1 class="over_skrift"></h1>
+    <main>
+        <!--Her starter karrusellens HTML    -->
+        <section class="carousel">
 
-        <div class="pictwo">
-            <img class="two" src="img/1st/img914.jpg" alt="one">
+            <div class="bwd">
+                <p>&lt;</p>
+            </div>
+            <!--pics contaioneren med overflw: hidden så vi kun ser et billede ad gangen            -->
+            <div class="pics_container">
+                <div class="pics">
+                    <!-- her bliver vores klonede template med billederne i sat ind-->
+                </div>
+                <label class="radio_btn_container"></label>
+            </div>
+            <div class="fwd">
+                <p>&gt;</p>
+            </div>
 
-        </div>
-
-        <div class="picthree">
-            <img class="three" src="img/2nd/img900.jpg" alt="one">
-
-        </div>
-    </section>
+        </section>
+    </main>
 
 
-    <footer></footer>
-    <script src="script.js"></script>
-</body>
 
-</html>
+
+    <script>
+        "use strict"
+
+        let theJSON;
+        //let urlParams = new URLSearchParams(window.location.search);
+        // hard wired til post id 221
+        const theId = 88;
+
+        // Karrusellens tæller
+        let caroCurrentNum = 0;
+        // Antal sekunder hvert biillede i karrusellen er på
+        let caroSpeed = 3000;
+        // Antallet af billeder der kommer til at være i karrusellen, kender vi ikke før vi har loaded vores JSON
+        let numberOfPicsInCarousel;
+        // varibalen der indeholder vores interval til automatisk karruseldrift
+        let automaticInterval;
+
+        const url = "https://theodior.dk/kea/The_Leftovers/wordpress/wp-json/wp/v2/lookbooks/" + theId;
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+
+            hentJSON();
+
+
+
+
+
+            // event listnere til karrusellens knapper
+            document.querySelector(".fwd").addEventListener("click", fwd);
+            document.querySelector(".bwd").addEventListener("click", bwd);
+            // disse to event listenere handler om at stopppe karrusellen når man har cursoren inde over den
+            document.querySelector(".carousel").addEventListener("mouseover", interruption);
+            document.querySelector(".carousel").addEventListener("mouseout", automatic);
+
+
+        }
+
+        async function hentJSON() {
+            const response = await fetch(url);
+            theJSON = await response.json();
+            console.log("theJSON", theJSON);
+            vis();
+        }
+
+        function vis() {
+
+            document.querySelector(".over_skrift").textContent = theJSON.title.rendered;
+            buildCarousel();
+        }
+
+        function buildCarousel() {
+            // Antallet af billeder i karrusellen svarer jo til længden af arrayet med billederne
+            numberOfPicsInCarousel = theJSON.billeder.length;
+            // Vin sætter bredden af pics så den passeer med antallet af billederr
+            document.querySelector(".pics").style.width = `${numberOfPicsInCarousel*100}%`
+            // Vi looper over billed array'et
+            theJSON.billeder.forEach((billede, index) => {
+
+                const theClone = document.querySelector("template").cloneNode(true).content;
+                theClone.querySelector("img").src = billede.guid
+
+                // Vi lægger billederne ind i elementet pics
+                document.querySelector(".pics").appendChild(theClone);
+
+                // Vi fabrikerer en radiobutton pr billede der skal være i bunden
+                let radioBTN = document.createElement("input");
+                radioBTN.type = "radio"
+                radioBTN.classList.add("btn" + index);
+                radioBTN.classList.add("radioBTN");
+                radioBTN.dataset.num = index;
+                radioBTN.addEventListener("click", radioBTNClick);
+                // Vi appender radiobutton til radio_btn_container
+                document.querySelector(".radio_btn_container").appendChild(radioBTN);
+
+
+            })
+            // Den første radio button skal være valgt når vi starter
+            document.querySelector(".btn0").checked = true;
+            // BWD knappen skal være deaktiveret når vi starter
+            document.querySelector(".bwd").style.opacity = 0.5;
+            document.querySelector(".bwd").style.cursor = "default";
+            // Start den automatiske karrusel
+            //automatic();
+
+        }
+        // Naviger fremad
+        function fwd() {
+            // Hvis karrusellens tæller er mindre end antallet af billeder minus 1 skal der ...
+            if (caroCurrentNum < numberOfPicsInCarousel - 1) {
+                // lægges en til tælleren
+                caroCurrentNum++;
+                // og vi kalder navigate funktionen der håndterer knappernes tilstand og flytter pics elememntet med alle billederne
+                navigate();
+            }
+        };
+
+        function bwd() {
+            // Hvis karrusellens tæller er mindre end nul skal der ...
+            if (caroCurrentNum > 0) {
+                // trækkes en fra tælleren
+                caroCurrentNum--;
+                // og vi kalder navigate funktionen der håndterer knappernes tilstand og flytter pics elememntet med alle billederne
+                navigate();
+            }
+        };
+
+        function radioBTNClick() {
+            // hvis der klikkes på en af radio buttons i bunden skal tælleren opdateres så vi navigerer til det rette nummer foto
+            caroCurrentNum = this.dataset.num;
+            // og vi kalder navigate funktionen der håndterer knappernes tilstand og flytter pics elememntet med alle billederne
+            navigate();
+        }
+
+        function navigate() {
+            // Vi flytter pics elementet med alle billederne i tælleren gange 100%
+            document.querySelector(".pics").style.left = `${-caroCurrentNum * 100}%`;
+
+            // Alle radiobuttons sættes til uklikket ....
+            document.querySelectorAll(".radioBTN").forEach(each => {
+                each.checked = false;
+            });
+
+            // og den radiobutton "der er den" sættes til klikket
+            document.querySelector(".btn" + caroCurrentNum).checked = true;
+
+
+            if (caroCurrentNum < numberOfPicsInCarousel - 1) {
+                // Hvis ikke vi er nået til sidste billede i kaarusellen skal fwd knappen være aktiv ...
+                document.querySelector(".fwd").style.opacity = 1;
+                document.querySelector(".fwd").style.cursor = "pointer";
+
+            } else {
+                // ellers skal den være inaktiv
+                document.querySelector(".fwd").style.opacity = 0.2;
+                document.querySelector(".fwd").style.cursor = "default";
+            }
+
+
+            if (caroCurrentNum > 0) {
+                // Hvis ikke vi er ved det første billede i kaarusellen skal bwd knappen være aktiv ...
+                document.querySelector(".bwd").style.opacity = 1;
+                document.querySelector(".bwd").style.cursor = "pointer";
+
+            } else {
+                // ellers skal den være inaktiv
+                document.querySelector(".bwd").style.opacity = 0.2;
+                document.querySelector(".bwd").style.cursor = "default";
+            }
+
+        }
+        // karrusellen  kører af sig selv når vi starter eller mouser out på karrusellen
+        function automatic() {
+            automaticInterval = setInterval(function() {
+                // Hvis vi er nået til det det sidste billede i karrusellen sætter vi tælleren til minus 1 og kalder fwd funktionen der jo tæller en op, derfor minus 1
+                if (caroCurrentNum >= numberOfPicsInCarousel - 1) {
+                    caroCurrentNum = -1;
+                }
+                fwd();
+                // hstighed i millisekunder
+            }, caroSpeed);
+        }
+
+        function interruption() {
+            // Hvis der er mouse over på karrusellen fjernes intervallet og karrusellen standser
+            clearInterval(automaticInterval);
+
+        }
+    </script>
+</body></html>
