@@ -190,3 +190,68 @@ nav a:hover {
 
 
 }
+
+/*LOADING*/
+/*                     Loading Hjul                     */
+
+
+.bunny {
+    animation-name: pulse_kf;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+
+}
+
+@keyframes pulse_kf {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+#bunny_container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    z-index: 2;
+}
+
+
+.bunny_sprite {
+    background-image: url(logo/1x/bunny.png);
+    width: 199px;
+    height: 260px;
+    background-size: 100%;
+    z-index: 2;
+}
+
+.easein {
+    position: relative;
+    animation-name: easein;
+    animation-duration: 1s
+}
+
+
+
+@keyframes easein {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
