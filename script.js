@@ -62,7 +62,7 @@ function vis() {
 
                 klon.querySelector("img").src = cykel.billede.guid;
                 klon.querySelector("img").alt = "billede af" + cykel.title.rendered;
-                klon.querySelector(".beskrivelse").innerHTML = cykel.kort;
+//                klon.querySelector(".beskrivelse").innerHTML = cykel.kort;
                 liste.appendChild(klon);
                 liste.lastElementChild.addEventListener("click", () => {
                     location.href = `produkt.html?navn=${cykel.navn}`
