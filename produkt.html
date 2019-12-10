@@ -54,6 +54,30 @@
         background-color: whitesmoke;
     }
 
+    #koeb {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 15px;
+    }
+
+    .buy {
+        background-color: black;
+        border: none;
+        color: snow;
+        padding: 15px 32px;
+        border-radius: 22px;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        margin-left: 3vw;
+        margin-top: 20vw;
+    }
+
+    .buy:hover {
+        color: black;
+        background-color: whitesmoke;
+    }
+
     .infoCykler h2 {
         margin-left: 5vw;
         margin-bottom: 1vw;
@@ -189,9 +213,21 @@
 
         }
 
+        #koeb {
+            display: flex;
+            justify-content: center;
+            margin-right: 15px;
+        }
+
+        .buy {
+            margin-bottom: 4vw;
+            margin-left: 15.5vw;
+            margin-top: -5vw;
+            z-index: 1;
+        }
+
 
     }
-
 </style>
 
 <body>
@@ -247,8 +283,9 @@
             </article>
 
         </section>
-
-
+        <section id="koeb">
+            <button class="buy">Køb</button>
+        </section>
     </main>
     <div class="tom"> </div>
 
@@ -299,8 +336,5 @@
         document.querySelector(".luk").addEventListener("click", () => {
             history.back();
         })
-
     </script>
-</body>
-
-</html>
+</body></html>
