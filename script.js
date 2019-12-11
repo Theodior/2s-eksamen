@@ -15,11 +15,13 @@ function start() {
     setTimeout(showPage, 2000)
 }
 
+/*Loading på index.html*/
 function showPage() {
     document.querySelector("#bunny_container").style.display = "none";
     document.querySelector("#body_container").style.display = "block";
 }
 
+/*Henter footer fra DRY*/
 async function hentFooter() {
     const response = await fetch("inc/footer.html");
     const inclusion = await response.text();
@@ -45,7 +47,7 @@ function toggleMenu() {
     }
 }
 
-
+/*Henter array fra Json, via REST-API og kalder derefter function vis*/
 
 async function hentJson() {
     const response = await fetch(url);
@@ -54,7 +56,7 @@ async function hentJson() {
     vis();
 }
 
-
+/*Vis tager udgangspunkt i template, hvortil den kloner de forskellig elementer ind i dem. Disse elementer kommer fra Rest-api via. Wordpress som backend. Filter bliver også tilføjet*/
 function vis() {
     const skabelon = document.querySelector("template");
     const liste = document.querySelector(".liste");
@@ -78,6 +80,7 @@ function vis() {
     }
 }
 
+/*Vis single fortæller hvilke elementer som skal komme på produkt.html*/
 function visSingle(bike) {
     document.querySelector("#single").style.display = "block";
     document.querySelector("#single .luk").addEventListener("click", lukSingle);
@@ -92,13 +95,14 @@ function lukSingle() {
 }
 
 
-
+/*Adder click til filter knapper*/
 function addEventListenersToButtons() {
     document.querySelectorAll(".filter").forEach(elm => {
         elm.addEventListener("click", filtrering);
     })
 }
 
+/*Skifter filter på valgt og fortæller i h2, hvilket filter man er på*/
 function filtrering() {
     filter = this.dataset.kategori;
     document.querySelector("h2").textContent = this.textContent;
