@@ -15,7 +15,7 @@ function start() {
     setTimeout(showPage, 2000)
 }
 
-/*Loading på index.html*/
+//Loading på index.html
 function showPage() {
     document.querySelector("#bunny_container").style.display = "none";
     document.querySelector("#body_container").style.display = "block";
