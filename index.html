@@ -88,19 +88,38 @@
                 color: white;
                 font-size: 45px;
                 text-shadow: 0 0 9px white;
-                position: fixed;
+                position: absolute;
                 top: 40vw;
                 cursor: pointer;
                 letter-spacing: 3px;
             }
 
-            #index .splash_text p {
-                font-family: 'Bebas Neue', cursive;
-            }
         }
 
         /*TABLET*/
-        @media screen and (min-width:700px) {}
+        @media screen and (min-width:700px) {
+            #index .logo {
+                width: 65px;
+                height: 65px;
+                position: fixed;
+                left: 4vw;
+                top: 1.5vw;
+                cursor: pointer;
+                /*                z-index: 1;*/
+            }
+
+            #index .splash_text {
+                text-align: end;
+                margin-left: 60vw;
+                color: white;
+                font-size: 45px;
+                text-shadow: 0 0 9px white;
+                position: absolute;
+                top: 70vw;
+                cursor: pointer;
+                letter-spacing: 3px;
+            }
+        }
     </style>
 </head>
 
