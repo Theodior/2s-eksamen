@@ -42,6 +42,7 @@
         grid-template-areas:
             " sh2 "
             " s_p "
+            " c_c "
             " s_p2 "
             " footer ";
 
@@ -70,6 +71,11 @@
 
     }
 
+    #stockist_container .stockist .content_c {
+        grid-area: c_c;
+        text-align: center;
+    }
+
     #stockist_container .logo {
         width: 65px;
         height: 65px;
@@ -84,6 +90,59 @@
         height: 19vw;
         background-color: whitesmoke;
     }
+
+    /**TEST COLLAPSIBLE***/
+
+    .collapsible {
+        background-color: whitesmoke;
+        color: #444;
+        cursor: pointer;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        margin: 10px;
+        height: 20vw;
+        width: 92vw;
+    }
+
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active,
+    .collapsible:hover {
+        background-color: whitesmoke;
+    }
+
+    /* Style the collapsible content. Note: hidden by default */
+    .content {
+        display: none;
+        overflow: hidden;
+        margin: 3vw;
+        height: 43vw;
+        width: 92vw;
+        background-color: black;
+    }
+
+    .collapsible:after {
+        content: '\02795';
+        /* Unicode character for "plus" sign (+) */
+        font-size: 13px;
+        /*    background-color: rgba(222, 220, 219, 0.42);*/
+        float: right;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        position: absolute;
+        left: 4vw;
+        top: 72vw;
+    }
+
+    .active:after {
+        content: "\2796";
+        margin-right: 5px;
+        margin-bottom: 5px;
+        /* Unicode character for "minus" sign (-) */
+    }
+
 
 
     /***********   DESKTOP *********/
@@ -204,9 +263,16 @@
     </header>
     <section class="stockist">
         <h2 class="stockist_h2">Stockist</h2>
-        <p class="stockist_p">
-            COPENHAGEN
-        </p>
+        <button class="collapsible">
+            <p class="stockist_p">
+                COPENHAGEN
+            </p>
+        </button>
+        <div class="content_c">
+            <h3 class="butik_1">WoodWood / Grønnegade 1</h3>
+            <h3 class="butik_2">CHHO / Møllegade 18 </h3>
+            <!--            <p class="butik_1p">Nørregade 31</p>-->
+        </div>
 
         <p class="stockist_p2">
             AARHUS
@@ -217,7 +283,26 @@
     <footer></footer>
 
 
-    <script src="script.js"></script>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        /** document.getElementsByClassName returns an array-like object of all child elements which have all of the given class names. In your case you should modify your code like this. getElementsByClassName returns a HTMLCollection which doesn't have classList property, you should iterate through the collection.**/
+
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+
+    </script>
 </body>
 
 </html>
