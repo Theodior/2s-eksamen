@@ -129,7 +129,7 @@ nav a:hover {
     padding-right: 2px;
     font-size: 1rem;
     line-height: 80px;
-    font-family: 'Roboto', sans-serif;
+    font-family: cursive;
 }
 
 .topnav a:hover {
@@ -194,7 +194,6 @@ nav a:hover {
 /*LOADING*/
 /*                     Loading Hjul                     */
 
-
 .bunny {
     animation-name: pulse_kf;
     animation-duration: 2s;
@@ -223,8 +222,6 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: whitesmoke;
-    z-index: 2;
 }
 
 

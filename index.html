@@ -17,10 +17,10 @@
             right: 83vw;
             top: 1.5vw;
             cursor: pointer;
-            z-index: 1;
+            /*            z-index: 1;*/
         }
 
-        #index .header_img img {
+        #index .header_img {
             z-index: -1;
         }
 
@@ -43,7 +43,7 @@
             color: white;
             font-size: 45px;
             text-shadow: 0 0 9px black;
-            z-index: 1;
+            /*            z-index: 1;*/
             position: absolute;
             top: 100vw;
             cursor: pointer;
@@ -62,10 +62,10 @@
                 right: 4vw;
                 top: 1.5vw;
                 cursor: pointer;
-                z-index: 1;
+                /*                z-index: 1;*/
             }
 
-            #index .header_img img {
+            #index .header_img {
                 z-index: -1;
             }
 
@@ -88,25 +88,46 @@
                 color: white;
                 font-size: 45px;
                 text-shadow: 0 0 9px white;
-                position: fixed;
+                position: absolute;
                 top: 40vw;
                 cursor: pointer;
                 letter-spacing: 3px;
             }
 
-            #index .splash_text p {
-                font-family: 'Bebas Neue', cursive;
-            }
         }
 
         /*TABLET*/
-        @media screen and (min-width:700px) {}
+        @media screen and (max-width:700px) {
+            #index .logo {
+                width: 65px;
+                height: 65px;
+                position: fixed;
+                left: 4vw;
+                top: 1.5vw;
+                cursor: pointer;
+                /*                z-index: 1;*/
+            }
+
+            #index .splash_text {
+                text-align: end;
+
+                color: white;
+                font-size: 45px;
+                text-shadow: 0 0 9px white;
+                position: absolute;
+
+                cursor: pointer;
+                letter-spacing: 3px;
+            }
+        }
+
     </style>
 </head>
 
-<body>
+<body id="body_container">
 
     <!-- Loading  -->
+
     <div id="bunny_container" class="bunny">
 
         <div class="bunny_sprite"></div>
@@ -150,10 +171,12 @@
         </div>
         <div class="header_img">
             <video class="header_img video" autoplay="" muted="" loop="" id="video">
-                <source src="video/bg-video.mp4" type="video/mp4">
+                <source src="video/bg-video2.mp4" type="video/mp4">
             </video>
         </div>
 
         <script src="script.js"></script>
     </section>
-</body></html>
+</body>
+
+</html>
