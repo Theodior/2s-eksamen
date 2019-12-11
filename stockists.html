@@ -44,6 +44,7 @@
             " s_p "
             " c_c "
             " s_p2 "
+            " c_a "
             " footer ";
 
     }
@@ -57,24 +58,39 @@
 
     }
 
+    /****CPH TEXT *****/
+
     #stockist_container .stockist .stockist_p {
         grid-area: s_p;
-        text-align: center;
         font-size: 3rem;
 
     }
 
-    #stockist_container .stockist .stockist_p2 {
-        grid-area: s_p2;
-        text-align: center;
-        font-size: 3rem;
-
-    }
+    /****BUTIKER TEXT *****/
 
     #stockist_container .stockist .content_c {
         grid-area: c_c;
+
+    }
+
+    /*** AARHUS TEXT ***/
+
+    #stockist_container .stockist .stockist_p2 {
+        grid-area: s_p2;
+        font-size: 3rem;
+
+
+    }
+
+    /**** STOY TEXT ***/
+
+
+    #stockist_container .stockist .content_a {
+        grid-area: c_a;
         text-align: center;
     }
+
+    /**** SLUT ****/
 
     #stockist_container .logo {
         width: 65px;
@@ -97,11 +113,9 @@
         background-color: whitesmoke;
         color: #444;
         cursor: pointer;
-        width: 100%;
         border: none;
         text-align: left;
         outline: none;
-        font-size: 15px;
         margin: 10px;
         height: 20vw;
         width: 92vw;
@@ -114,34 +128,49 @@
     }
 
     /* Style the collapsible content. Note: hidden by default */
-    .content {
+    .content_c {
         display: none;
         overflow: hidden;
         margin: 3vw;
-        height: 43vw;
+        height: 20vw;
+        width: 50vw;
+        /*background-color: black;*/
+    }
+
+
+
+    /*** COPENHAGEN TOGGLE DONE****/
+
+    .collapsible2 {
+        background-color: whitesmoke;
+        color: #444;
+        cursor: pointer;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        margin: 10px;
+        height: 20vw;
         width: 92vw;
-        background-color: black;
     }
 
-    .collapsible:after {
-        content: '\02795';
-        /* Unicode character for "plus" sign (+) */
-        font-size: 13px;
-        /*    background-color: rgba(222, 220, 219, 0.42);*/
-        float: right;
-        margin-right: 5px;
-        margin-bottom: 5px;
-        position: absolute;
-        left: 4vw;
-        top: 72vw;
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active,
+    .collapsible2:hover {
+        background-color: whitesmoke;
     }
 
-    .active:after {
-        content: "\2796";
-        margin-right: 5px;
-        margin-bottom: 5px;
-        /* Unicode character for "minus" sign (-) */
+    /* Style the collapsible content. Note: hidden by default */
+    .content_a {
+        display: none;
+        overflow: hidden;
+        margin: 3vw;
+        height: 15vw;
+        width: 35vw;
+        /*background-color: black;*/
     }
+
 
 
 
@@ -183,6 +212,7 @@
             grid-template-areas:
                 " sh2 sh2 "
                 " s_p s_p2 "
+                " c_c c_a "
                 " footer footer ";
 
         }
@@ -199,15 +229,32 @@
         #stockist_container .stockist .stockist_p {
             grid-area: s_p;
             font-size: 3rem;
-            margin-right: 20vw;
+            margin-left: 10vw;
 
         }
 
+        /****BUTIKER TEXT *****/
+
+        #stockist_container .stockist .content_c {
+            grid-area: c_c;
+            margin-left: 15vw;
+
+        }
+
+        /***ÅRHUS H2****/
+
         #stockist_container .stockist .stockist_p2 {
             grid-area: s_p2;
+            margin-left: 14vw;
             font-size: 3rem;
-            margin-right: 8vw;
 
+        }
+
+        /****STOY TEXT****/
+
+        #stockist_container .stockist .content_a {
+            grid-area: c_a;
+            margin-left: 12vw;
         }
 
         #stockist_container .logo {
@@ -224,6 +271,70 @@
             height: 16vw;
             background-color: whitesmoke;
         }
+
+
+
+        /**TEST COLLAPSIBLE***/
+
+        .collapsible {
+            background-color: whitesmoke;
+            color: #444;
+            cursor: pointer;
+            /*width: 100%;*/
+            border: none;
+            text-align: left;
+            outline: none;
+            margin: 10px;
+            height: 20vw;
+            width: 40vw;
+        }
+
+        /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+        .active,
+        .collapsible:hover {
+            background-color: whitesmoke;
+        }
+
+        /* Style the collapsible content. Note: hidden by default */
+        .content_c {
+            display: none;
+            overflow: hidden;
+            margin: 2vw;
+            height: 10vw;
+            width: 20vw;
+        }
+
+
+        /*** COPENHAGEN TOGGLE DONE****/
+
+        .collapsible2 {
+            background-color: whitesmoke;
+            color: #444;
+            cursor: pointer;
+            border: none;
+            text-align: left;
+            outline: none;
+            margin: 10px;
+            height: 20vw;
+            width: 40vw;
+        }
+
+        /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+        .active,
+        .collapsible2:hover {
+            background-color: whitesmoke;
+        }
+
+        /* Style the collapsible content. Note: hidden by default */
+        .content_a {
+            display: none;
+            overflow: hidden;
+            margin: 2vw;
+            height: 10vw;
+            width: 20vw;
+        }
+
+
 
 
 
@@ -262,7 +373,7 @@
         </div>
     </header>
     <section class="stockist">
-        <h2 class="stockist_h2">Stockist</h2>
+        <h2 class="stockist_h2">STOCKISTS</h2>
         <button class="collapsible">
             <p class="stockist_p">
                 COPENHAGEN
@@ -273,11 +384,16 @@
             <h3 class="butik_2">CHHO / Møllegade 18 </h3>
             <!--            <p class="butik_1p">Nørregade 31</p>-->
         </div>
+        <button class="collapsible2">
+            <p class="stockist_p2">
+                AARHUS
+            </p>
+        </button>
+        <div class="content_a">
+            <h3 class="butik_3">STOY / Store torv 4 </h3>
+        </div>
 
-        <p class="stockist_p2">
-            AARHUS
-        </p>
-        <div class="whitesmoke"></div>
+
     </section>
 
     <footer></footer>
@@ -285,6 +401,25 @@
 
     <script>
         var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        /** document.getElementsByClassName returns an array-like object of all child elements which have all of the given class names. In your case you should modify your code like this. getElementsByClassName returns a HTMLCollection which doesn't have classList property, you should iterate through the collection.**/
+
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+
+
+        var coll = document.getElementsByClassName("collapsible2");
         var i;
 
         /** document.getElementsByClassName returns an array-like object of all child elements which have all of the given class names. In your case you should modify your code like this. getElementsByClassName returns a HTMLCollection which doesn't have classList property, you should iterate through the collection.**/
