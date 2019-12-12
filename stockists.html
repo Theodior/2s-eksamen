@@ -41,8 +41,10 @@
         /*max-width: 90vw;*/
         grid-template-areas:
             " sh2 "
+            " cph "
             " s_p "
             " c_c "
+            " ahus "
             " s_p2 "
             " c_a "
             " footer ";
@@ -58,6 +60,14 @@
 
     }
 
+    #stockist_container .stockist .cph {
+        grid-area: cph;
+        font-size: 1rem;
+        margin-left: 5vw;
+        margin-top: 10vw;
+
+    }
+
     /****CPH TEXT *****/
 
     #stockist_container .stockist .stockist_p {
@@ -70,6 +80,15 @@
 
     #stockist_container .stockist .content_c {
         grid-area: c_c;
+        margin-left: 13vw;
+
+    }
+
+    #stockist_container .stockist .ahus {
+        grid-area: ahus;
+        font-size: 1rem;
+        margin-left: 5vw;
+        margin-top: 15vw;
 
     }
 
@@ -87,7 +106,7 @@
 
     #stockist_container .stockist .content_a {
         grid-area: c_a;
-        text-align: center;
+        margin-left: 13vw;
     }
 
     /**** SLUT ****/
@@ -102,74 +121,6 @@
         z-index: 1;
     }
 
-    .whitesmoke {
-        height: 19vw;
-        background-color: whitesmoke;
-    }
-
-    /**TEST COLLAPSIBLE***/
-
-    .collapsible {
-        background-color: whitesmoke;
-        color: #444;
-        cursor: pointer;
-        border: none;
-        text-align: left;
-        outline: none;
-        margin: 10px;
-        height: 20vw;
-        width: 92vw;
-    }
-
-    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-    .active,
-    .collapsible:hover {
-        background-color: whitesmoke;
-    }
-
-    /* Style the collapsible content. Note: hidden by default */
-    .content_c {
-        display: none;
-        overflow: hidden;
-        margin: 3vw;
-        height: 20vw;
-        width: 50vw;
-        /*background-color: black;*/
-    }
-
-
-
-    /*** COPENHAGEN TOGGLE DONE****/
-
-    .collapsible2 {
-        background-color: whitesmoke;
-        color: #444;
-        cursor: pointer;
-        width: 100%;
-        border: none;
-        text-align: left;
-        outline: none;
-        font-size: 15px;
-        margin: 10px;
-        height: 20vw;
-        width: 92vw;
-    }
-
-    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-    .active,
-    .collapsible2:hover {
-        background-color: whitesmoke;
-    }
-
-    /* Style the collapsible content. Note: hidden by default */
-    .content_a {
-        display: none;
-        overflow: hidden;
-        margin: 3vw;
-        height: 15vw;
-        width: 35vw;
-        /*background-color: black;*/
-    }
 
     /***********   DESKTOP *********/
 
@@ -209,11 +160,13 @@
             /*max-width: 90vw;*/
             grid-template-areas:
                 " sh2 sh2 "
+                " cph ahus "
                 " s_p s_p2 "
                 " c_c c_a "
                 " footer footer ";
 
         }
+
 
         #stockist_container .stockist .stockist_h2 {
             grid-area: sh2;
@@ -224,10 +177,20 @@
 
         }
 
+
+
+        #stockist_container .stockist .cph {
+            grid-area: cph;
+            font-size: 1rem;
+
+
+        }
+
         #stockist_container .stockist .stockist_p {
             grid-area: s_p;
             font-size: 3rem;
-            margin-left: 10vw;
+            max-width: 26vw;
+            margin-left: 15vw;
 
         }
 
@@ -235,7 +198,13 @@
 
         #stockist_container .stockist .content_c {
             grid-area: c_c;
-            margin-left: 15vw;
+            margin-left: 20vw;
+
+        }
+
+        #stockist_container .stockist .ahus {
+            grid-area: ahus;
+            font-size: 1rem;
 
         }
 
@@ -243,8 +212,10 @@
 
         #stockist_container .stockist .stockist_p2 {
             grid-area: s_p2;
-            margin-left: 14vw;
             font-size: 3rem;
+            max-width: 20vw;
+            margin-top: -8vh;
+            margin-right: 11vw;
 
         }
 
@@ -252,7 +223,7 @@
 
         #stockist_container .stockist .content_a {
             grid-area: c_a;
-            margin-left: 12vw;
+            margin-left: 5vw;
         }
 
         #stockist_container .logo {
@@ -265,87 +236,9 @@
             z-index: 1;
         }
 
-        .whitesmoke {
-            height: 16vw;
-            background-color: whitesmoke;
-        }
 
-
-
-        /**TEST COLLAPSIBLE***/
-
-        .collapsible {
-            background-color: whitesmoke;
-            color: #444;
-            cursor: pointer;
-            /*width: 100%;*/
-            border: none;
-            text-align: left;
-            outline: none;
-            margin: 10px;
-            height: 20vw;
-            width: 40vw;
-        }
-
-        /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-        .active,
-        .collapsible:hover {
-            background-color: whitesmoke;
-        }
-
-        /* Style the collapsible content. Note: hidden by default */
-        .content_c {
-            display: none;
-            overflow: hidden;
-            margin: 2vw;
-            height: 10vw;
-            width: 20vw;
-        }
-
-
-        /*** COPENHAGEN TOGGLE DONE****/
-
-        .collapsible2 {
-            background-color: whitesmoke;
-            color: #444;
-            cursor: pointer;
-            border: none;
-            text-align: left;
-            outline: none;
-            margin: 10px;
-            height: 20vw;
-            width: 40vw;
-        }
-
-        /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-        .active,
-        .collapsible2:hover {
-            background-color: whitesmoke;
-        }
-
-        /* Style the collapsible content. Note: hidden by default */
-        .content_a {
-            display: none;
-            overflow: hidden;
-            margin: 2vw;
-            height: 10vw;
-            width: 20vw;
-        }
-
-
-
-
-        .stockist_p:hover {
-            text-decoration: line-through;
-        }
-
-        .stockist_p2:hover {
-            text-decoration: line-through;
-
-        }
 
     }
-
 </style>
 
 <body id="stockist_container">
@@ -379,24 +272,27 @@
     </header>
     <section class="stockist">
         <h2 class="stockist_h2">STOCKISTS</h2>
-        <button class="collapsible">
-            <p class="stockist_p">
-                COPENHAGEN
-            </p>
-        </button>
-        <div class="content_c">
-            <h3 class="butik_1">WoodWood / Grønnegade 1</h3>
-            <h3 class="butik_2">CHHO / Møllegade 18 </h3>
-            <!--            <p class="butik_1p">Nørregade 31</p>-->
-        </div>
-        <button class="collapsible2">
-            <p class="stockist_p2">
-                AARHUS
-            </p>
-        </button>
-        <div class="content_a">
-            <h3 class="butik_3">STOY / Store torv 4 </h3>
-        </div>
+        <details class=cph>
+
+            <summary class="stockist_p">
+                Copenhagen
+            </summary>
+
+            <div class="content_c">
+                <h3>WoodWood / Grønnegade 1</h3>
+                <h3>CHHO / Møllegade 18 </h3>
+            </div>
+        </details>
+
+        <details class="ahus">
+            <summary class="stockist_p2">
+                Aarhus
+            </summary>
+            <div class="content_a">
+                <h3>STOY / Store torv 4 </h3>
+            </div>
+        </details>
+
 
 
     </section>
@@ -404,45 +300,7 @@
     <footer></footer>
 
 
-    <script>
-        var coll = document.getElementsByClassName("collapsible");
-        var i;
-
-        /** document.getElementsByClassName returns an array-like object of all child elements which have all of the given class names. In your case you should modify your code like this. getElementsByClassName returns a HTMLCollection which doesn't have classList property, you should iterate through the collection.**/
-
-
-        for (i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.display === "block") {
-                    content.style.display = "none";
-                } else {
-                    content.style.display = "block";
-                }
-            });
-        }
-
-
-        var coll = document.getElementsByClassName("collapsible2");
-        var i;
-
-        /** document.getElementsByClassName returns an array-like object of all child elements which have all of the given class names. In your case you should modify your code like this. getElementsByClassName returns a HTMLCollection which doesn't have classList property, you should iterate through the collection.**/
-
-
-        for (i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.display === "block") {
-                    content.style.display = "none";
-                } else {
-                    content.style.display = "block";
-                }
-            });
-        }
-
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
