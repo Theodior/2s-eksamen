@@ -10,14 +10,16 @@
     <style>
         #look {
             font-family: sans-serif;
-            display: grid;
+
             background-color: whitesmoke;
+
 
 
         }
 
         .empty {
-            height: 10vw;
+            height: 20vw;
+            width: 100vw;
         }
 
         #look .logo {
@@ -35,6 +37,8 @@
             /*            width: 50vw;*/
             display: flex;
             justify-content: center;
+            width: 100%;
+            margin-bottom: 10vw;
         }
 
         /* Her starter karrusel   styles   */
@@ -42,7 +46,7 @@
             /*  Denne hoved container indeholder 3 elementer .bwd   .pics_container og .fwd for at få dem vandret får de en gang flex         */
             display: flex;
             /*  Karrusellen skal fylde helt ud i det element ve putter den ind i fx et grid*/
-            width: 50%;
+            width: 80%;
             margin: 0px;
 
         }
@@ -77,11 +81,13 @@
             /* Hvert img ligger i en img_container - det virker ikke uden  */
             width: 100%;
 
+
         }
 
         img {
             /* En klassiker*/
             width: 100%;
+
         }
 
         .fwd,
@@ -134,9 +140,30 @@
                 /*            width: 50vw;*/
                 display: flex;
                 justify-content: center;
+                width: 100%;
+            }
+
+            .img_container {
+                /* Hvert img ligger i en img_container - det virker ikke uden  */
+                width: 1.8%;
+
+            }
+
+            img {
+                /* En klassiker*/
+                width: 100%;
+
+            }
+
+            .carousel {
+                /*  Denne hoved container indeholder 3 elementer .bwd   .pics_container og .fwd for at få dem vandret får de en gang flex         */
+                display: flex;
+                /*  Karrusellen skal fylde helt ud i det element ve putter den ind i fx et grid*/
+                width: 80%;
+                margin: 0px;
+
             }
         }
-
     </style>
 
 
@@ -376,8 +403,5 @@
             clearInterval(automaticInterval);
 
         }
-
     </script>
-</body>
-
-</html>
+</body></html>
