@@ -62,7 +62,6 @@
 
     #stockist_container .stockist .cph {
         grid-area: cph;
-        font-size: 1rem;
         margin-left: 5vw;
         margin-top: 10vw;
 
@@ -73,6 +72,7 @@
     #stockist_container .stockist .stockist_p {
         grid-area: s_p;
         font-size: 3rem;
+        font-family: 'Roboto', sans-serif;
 
     }
 
@@ -81,12 +81,12 @@
     #stockist_container .stockist .content_c {
         grid-area: c_c;
         margin-left: 13vw;
+        font-family: 'Roboto', sans-serif;
 
     }
 
     #stockist_container .stockist .ahus {
         grid-area: ahus;
-        font-size: 1rem;
         margin-left: 5vw;
         margin-top: 15vw;
 
@@ -97,6 +97,8 @@
     #stockist_container .stockist .stockist_p2 {
         grid-area: s_p2;
         font-size: 3rem;
+        font-family: 'Roboto', sans-serif;
+
 
 
     }
@@ -107,6 +109,7 @@
     #stockist_container .stockist .content_a {
         grid-area: c_a;
         margin-left: 13vw;
+
     }
 
     /**** SLUT ****/
@@ -121,9 +124,32 @@
         z-index: 1;
     }
 
+    .whitesmoke {
+        height: 13vw;
+        background-color: whitesmoke;
+    }
+
     /*summary::-webkit-details-marker {
         display: none
     }*/
+
+    summary::-webkit-details-marker {
+        display: none
+    }
+
+    summary:after {
+        content: "+";
+        color: #000000;
+        float: left;
+        font-size: 3rem;
+        font-weight: lighter;
+        text-align: left;
+        width: 10vw;
+    }
+
+    details[open] summary:after {
+        content: "-";
+    }
 
 
 
@@ -162,7 +188,6 @@
         #stockist_container .stockist {
             display: grid;
             width: 100%;
-            /*max-width: 90vw;*/
             grid-template-areas:
                 " sh2 sh2 "
                 " cph ahus "
@@ -186,7 +211,7 @@
 
         #stockist_container .stockist .cph {
             grid-area: cph;
-            font-size: 1rem;
+
 
 
         }
@@ -209,7 +234,6 @@
 
         #stockist_container .stockist .ahus {
             grid-area: ahus;
-            font-size: 1rem;
 
         }
 
@@ -228,7 +252,7 @@
 
         #stockist_container .stockist .content_a {
             grid-area: c_a;
-            margin-left: 5vw;
+            margin-left: 4vw;
         }
 
         #stockist_container .logo {
@@ -250,12 +274,22 @@
             cursor: pointer;
         }
 
-        .stockist_p2:hover {
-            text-decoration: underline;
+        summary::-webkit-details-marker {
+            display: none
         }
 
-        .stockist_p:hover {
-            text-decoration: underline;
+        summary:after {
+            content: "+";
+            color: #000000;
+            float: left;
+            font-size: 3rem;
+            font-weight: lighter;
+            text-align: left;
+            width: 3vw;
+        }
+
+        details[open] summary:after {
+            content: "-";
         }
 
 
