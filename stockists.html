@@ -47,6 +47,7 @@
             " ahus "
             " s_p2 "
             " c_a "
+            " si "
             " footer ";
 
     }
@@ -112,6 +113,12 @@
 
     }
 
+    #stockist_container .stockist .sign {
+        grid-area: si;
+        margin-top: 15vh;
+
+    }
+
     /**** SLUT ****/
 
     #stockist_container .logo {
@@ -129,9 +136,6 @@
         background-color: whitesmoke;
     }
 
-    /*summary::-webkit-details-marker {
-        display: none
-    }*/
 
     summary::-webkit-details-marker {
         display: none
@@ -150,6 +154,63 @@
     details[open] summary:after {
         content: "-";
     }
+
+    a {
+        color: black;
+        text-decoration: none;
+
+    }
+
+    a:hover {
+        color: black;
+        text-decoration: line-through;
+
+    }
+
+
+    /***** SIGN UP CSS ****/
+
+form {
+font-family: 'Roboto', sans-serif;
+}
+
+.container {
+padding: 20px;
+background-color: whitesmoke;
+}
+
+input[type=text] {
+width: 100%;
+padding: 12px;
+margin: 8px 0;
+display: inline-block;
+border: none;
+border-bottom: 2px solid black;
+box-sizing: border-box;
+background-color: whitesmoke;
+}
+
+input[type=submit] {
+
+width: 100%;
+padding: 12px;
+margin: 8px 0;
+display: inline-block;
+background-color: whitesmoke;
+box-sizing: border-box;
+font-size: 2rem;
+color: black;
+border: none;
+text-align: left;
+margin-top: -5vh;
+}
+
+
+input[type=submit]:hover {
+opacity: 0.8;
+text-decoration: line-through;
+}
+
 
 
 
@@ -193,6 +254,7 @@
                 " cph ahus "
                 " s_p s_p2 "
                 " c_c c_a "
+                " si si "
                 " footer footer";
 
         }
@@ -255,6 +317,15 @@
             margin-left: 4vw;
         }
 
+
+        #stockist_container .stockist .sign {
+        grid-area: si;
+        margin-top: 5vh;
+        margin-left: 4vw;
+
+
+        }
+
         #stockist_container .logo {
             width: 65px;
             height: 65px;
@@ -292,8 +363,50 @@
             content: "-";
         }
 
+         /***** SIGN UP CSS ****/
 
-    }
+            form {
+            font-family: 'Roboto', sans-serif;
+            }
+
+            .container {
+            padding: 20px;
+            background-color: whitesmoke;
+            width: 20vw;
+            }
+
+            input[type=text] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            display: inline-block;
+            border: none;
+            border-bottom: 2px solid black;
+            box-sizing: border-box;
+            background-color: whitesmoke;
+            }
+
+            input[type=submit] {
+
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            display: inline-block;
+            background-color: whitesmoke;
+            box-sizing: border-box;
+            font-size: 2rem;
+            color: black;
+            border: none;
+            margin-top: -5vh;
+            text-align: center;
+            }
+
+            input[type=submit]:hover {
+            opacity: 0.8;
+            text-decoration: line-through;
+            }
+
+}
 </style>
 
 <body id="stockist_container">
@@ -334,8 +447,12 @@
             </summary>
 
             <div class="content_c">
-                <h3>WoodWood / Grønnegade 1</h3>
-                <h3>CHHO / Møllegade 18 </h3>
+                <a href="https://www.woodwood.com/">
+                    <h3 class="stock_3">WoodWood / Grønnegade 1</h3>
+                </a>
+                <a href="https://www.chho.dk/">
+                    <h3 class="stock_3">CHHO / Møllegade 18 </h3>
+                </a>
             </div>
         </details>
 
@@ -344,9 +461,24 @@
                 Aarhus
             </summary>
             <div class="content_a">
-                <h3>STOY / Store torv 4 </h3>
+                <a href="https://stoy.com/">
+                    <h3 class="stock_3">STOY / Store torv 4 </h3>
+                </a>
             </div>
         </details>
+
+        <form class="sign">
+
+
+            <div class="container">
+                <input type="text" placeholder="GET THE NEWSLETTER" name="mail" required>
+
+            </div>
+
+            <div class="container">
+                <input type="submit" value="SIGN UP">
+            </div>
+        </form>
 
 
         <div class="whitesmoke"></div>
