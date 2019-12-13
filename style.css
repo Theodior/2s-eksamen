@@ -135,7 +135,11 @@ nav a:hover {
 .topnav a:hover {
     color: black;
     text-shadow: 0 0 0.5px black;
+    color: black;
+    text-decoration: underline;
+/*    text-decoration: line-through;*/
 }
+
 
 .burgermenu {
     display: flex;
