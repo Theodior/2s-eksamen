@@ -10,6 +10,9 @@ body {
     border: 0;
 }
 
+::selection{
+    background: #8857b9;
+}
 
 * {
     box-sizing: border-box;
