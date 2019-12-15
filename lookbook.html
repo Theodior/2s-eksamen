@@ -155,7 +155,7 @@
 
             img {
                 /* En klassiker*/
-                width: 100%;
+                width: 95%;
 
             }
 
@@ -168,7 +168,6 @@
 
             }
         }
-
     </style>
 
 
@@ -263,8 +262,7 @@
         function start() {
 
             hentJSON();
-
-
+            sidenVises();
 
 
 
@@ -277,6 +275,7 @@
 
 
         }
+
 
         async function hentJSON() {
             const response = await fetch(url);
@@ -409,7 +408,24 @@
 
         }
 
-    </script>
-</body>
 
-</html>
+        /*burger menu*/
+
+        function sidenVises() {
+            console.log("sidenVises");
+            document.querySelector("#menuknap").addEventListener("click", toggleMenu);
+        }
+
+        function toggleMenu() {
+            console.log("toggleMenu");
+            document.querySelector("#menu").classList.toggle("hidden");
+
+            let erSkjult = document.querySelector("#menu").classList.contains("hidden");
+            if (erSkjult == true) {
+                document.querySelector("#menuknap").textContent = "☰";
+            } else {
+                document.querySelector("#menuknap").textContent = "X";
+            }
+        }
+    </script>
+</body></html>
