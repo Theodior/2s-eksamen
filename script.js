@@ -1,6 +1,6 @@
 window.addEventListener("load", start);
 
-let cykler = [];
+let produkter = [];
 const url = "https://theodior.dk/kea/The_Leftovers/wordpress/wp-json/wp/v2/leftovers?per_page=100";
 let filter = "Alle";
 
@@ -51,8 +51,7 @@ function toggleMenu() {
 
 async function hentJson() {
     const response = await fetch(url);
-    cykler = await response.json();
-    console.log(cykler);
+    produkter = await response.json();
     vis();
 }
 
@@ -63,17 +62,17 @@ function vis() {
     if (liste) {
         liste.innerHTML = "";
 
-        cykler.forEach((cykel) => {
-            if (filter == "Alle" || filter == cykel.kategori) {
+        produkter.forEach((produkt) => {
+            if (filter == "Alle" || filter == produkt.kategori) {
                 const klon = skabelon.cloneNode(true).content;
-                klon.querySelector(".title").textContent = cykel.navn;
+                klon.querySelector(".title").textContent = produkt.navn;
 
-                klon.querySelector("img").src = cykel.billede.guid;
-                klon.querySelector("img").alt = "billede af" + cykel.title.rendered;
-                //                klon.querySelector(".beskrivelse").innerHTML = cykel.kort;
+                klon.querySelector("img").src = produkt.billede.guid;
+                klon.querySelector("img").alt = "billede af" + produkt.title.rendered;
+
                 liste.appendChild(klon);
                 liste.lastElementChild.addEventListener("click", () => {
-                    location.href = `produkt.html?navn=${cykel.navn}`
+                    location.href = `produkt.html?navn=${produkt.navn}`
                 });
             }
         })
@@ -81,13 +80,13 @@ function vis() {
 }
 
 /*Vis single fortæller hvilke elementer som skal komme på produkt.html*/
-function visSingle(bike) {
+function visSingle(toej) {
     document.querySelector("#single").style.display = "block";
     document.querySelector("#single .luk").addEventListener("click", lukSingle);
-    document.querySelector(".beskrivelse h2").textContent = bike.navn;
-    document.querySelector(".beskrivelse .billede").src = bike.billede.guid;
-    document.querySelector(".beskrivelse .billede").alt = "billede af" + bike.navn;
-    document.querySelector(".beskrivelse .pris").textContent = bike.lang;
+    document.querySelector(".beskrivelse h2").textContent = toej.navn;
+    document.querySelector(".beskrivelse .billede").src = toej.billede.guid;
+    document.querySelector(".beskrivelse .billede").alt = "billede af" + toej.navn;
+    document.querySelector(".beskrivelse .pris").textContent = toej.lang;
 }
 
 function lukSingle() {
