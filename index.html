@@ -34,12 +34,13 @@
 
         p {
             margin: 0;
+
         }
 
         .alt {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 30vh 60vh 10vh;
+            grid-template-rows: 30vh 50vh 20vh;
         }
 
 
@@ -97,38 +98,8 @@
         }
 
 
-        /*TABLET*/
-        @media screen and (min-width:670px) {
-            #index .splash_text {
-
-                color: white;
-                font-size: 45px;
-                text-shadow: 0 0 9px black;
-                z-index: 1;
-
-                cursor: pointer;
-            }
 
 
-
-        }
-
-        /*TABLET*/
-        @media screen and (min-width:860px) {
-            #index .splash_text {
-
-
-                color: white;
-                font-size: 45px;
-                text-shadow: 0 0 9px black;
-                z-index: 1;
-
-                cursor: pointer;
-            }
-
-
-
-        }
 
         /*DESKTOP*/
         @media screen and (min-width:1000px) {
@@ -164,13 +135,18 @@
                 color: white;
                 font-size: 45px;
                 text-shadow: 0 0 9px white;
-
+                grid-column: 3;
                 cursor: pointer;
                 letter-spacing: 3px;
+                margin-bottom: 5vw;
             }
 
             #index .splash_text p {
                 font-family: 'Bebas Neue', cursive;
+            }
+
+            .alt {
+                grid-template-columns: 35vw 35vw 30vw;
             }
 
 
