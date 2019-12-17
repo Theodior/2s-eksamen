@@ -29,10 +29,10 @@
             right: 83vw;
             top: 1.5vw;
             cursor: pointer;
-            /*            z-index: 1;*/
+            z-index: 1;
         }
 
-        #index .header_img {
+        #index .header_img img {
             z-index: -1;
         }
 
@@ -55,14 +55,69 @@
             color: white;
             font-size: 45px;
             text-shadow: 0 0 9px black;
-            /*            z-index: 1;*/
+            z-index: 1;
             position: absolute;
-            top: 100vw;
+            top: 85vw;
             cursor: pointer;
         }
 
         #index .splash_text p {
             font-family: 'Bebas Neue', cursive;
+        }
+
+        /*TABLET*/
+        @media screen and (min-width:560px) {
+            #index .splash_text {
+                text-align: end;
+                margin-left: 50vw;
+                color: white;
+                font-size: 45px;
+                text-shadow: 0 0 9px black;
+                z-index: 1;
+                position: absolute;
+                top: 65vw;
+                cursor: pointer;
+            }
+
+
+
+        }
+
+
+        /*TABLET*/
+        @media screen and (min-width:670px) {
+            #index .splash_text {
+                text-align: end;
+                margin-left: 50vw;
+                color: white;
+                font-size: 45px;
+                text-shadow: 0 0 9px black;
+                z-index: 1;
+                position: absolute;
+                top: 52vw;
+                cursor: pointer;
+            }
+
+
+
+        }
+
+        /*TABLET*/
+        @media screen and (min-width:860px) {
+            #index .splash_text {
+                text-align: end;
+                margin-left: 50vw;
+                color: white;
+                font-size: 45px;
+                text-shadow: 0 0 9px black;
+                z-index: 1;
+                position: absolute;
+                top: 47vw;
+                cursor: pointer;
+            }
+
+
+
         }
 
         /*DESKTOP*/
@@ -74,10 +129,10 @@
                 right: 4vw;
                 top: 1.5vw;
                 cursor: pointer;
-                /*                z-index: 1;*/
+                z-index: 1;
             }
 
-            #index .header_img {
+            #index .header_img img {
                 z-index: -1;
             }
 
@@ -100,41 +155,17 @@
                 color: white;
                 font-size: 45px;
                 text-shadow: 0 0 9px white;
-                position: absolute;
-                top: 40vw;
-                cursor: pointer;
-                letter-spacing: 3px;
-            }
-
-        }
-
-        /*TABLET*/
-        @media screen and (max-width:700px) {
-            #index .logo {
-                width: 65px;
-                height: 65px;
                 position: fixed;
-                left: 4vw;
-                top: 1.5vw;
-                cursor: pointer;
-                /*                z-index: 1;*/
-            }
-
-            #index .splash_text {
-                text-align: end;
-
-                color: white;
-                font-size: 45px;
-                text-shadow: 0 0 9px white;
-                position: absolute;
-
+                top: 35vw;
                 cursor: pointer;
                 letter-spacing: 3px;
             }
-        }
 
+            #index .splash_text p {
+                font-family: 'Bebas Neue', cursive;
+            }
+        }
     </style>
-</head>
 
 <body id="body_container">
 
@@ -189,6 +220,4 @@
 
         <script src="script.js"></script>
     </section>
-</body>
-
-</html>
+</body></html>
