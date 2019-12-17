@@ -24,8 +24,8 @@
 <style>
     /*MOBILE*/
     #index .logo {
-        width: 20vw;
-        height: 20vh;
+        width: 18vw;
+        height: 18vw;
         position: fixed;
         right: 80vw;
         top: 1.5vw;
@@ -83,16 +83,19 @@
     }
 
     /*TABLET*/
-    @media screen and (min-width:560px) {
-        #index .splash_text {
+    @media screen and (min-width:660px) {
 
-            color: white;
-            font-size: 45px;
-            text-shadow: 0 0 9px black;
-            z-index: 1;
 
+        #index .logo {
+            width: 12vw;
+            height: 12vw;
+            position: fixed;
+            right: 85vw;
+            top: 1.5vw;
             cursor: pointer;
+            z-index: 1;
         }
+
 
 
 
@@ -105,8 +108,8 @@
     /*DESKTOP*/
     @media screen and (min-width:1000px) {
         #index .logo {
-            width: 20vw;
-            height: 20vh;
+            width: 18vw;
+            height: 18vh;
             position: fixed;
             right: 0px;
             top: 1.5vw;
@@ -153,7 +156,6 @@
 
 
     }
-
 </style>
 
 <body id="body_container">
@@ -212,6 +214,4 @@
 
         <script src="script.js"></script>
     </section>
-</body>
-
-</html>
+</body></html>
