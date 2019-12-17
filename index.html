@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="da">
 
 <head>
     <meta charset="utf-8">
@@ -32,6 +32,14 @@
             z-index: 1;
         }
 
+        .alt {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 30vw 60vw 10vw;
+        }
+
+
+
         #index .header_img img {
             z-index: -1;
         }
@@ -41,24 +49,26 @@
             height: 100vh;
             top: 0rem;
             position: relative;
+            grid-column: 1/ span 2;
+            z-index: -1;
         }
 
         #index .video {
             width: 100%;
             height: 100%;
             object-fit: cover;
+
         }
 
         #index .splash_text {
-            text-align: end;
-            margin-left: 50vw;
             color: white;
             font-size: 45px;
             text-shadow: 0 0 9px black;
             z-index: 1;
-            position: absolute;
-            top: 85vw;
             cursor: pointer;
+            grid-row: 3;
+            grid-column: 2;
+
         }
 
         #index .splash_text p {
@@ -68,14 +78,12 @@
         /*TABLET*/
         @media screen and (min-width:560px) {
             #index .splash_text {
-                text-align: end;
-                margin-left: 50vw;
+
                 color: white;
                 font-size: 45px;
                 text-shadow: 0 0 9px black;
                 z-index: 1;
-                position: absolute;
-                top: 65vw;
+
                 cursor: pointer;
             }
 
@@ -87,14 +95,12 @@
         /*TABLET*/
         @media screen and (min-width:670px) {
             #index .splash_text {
-                text-align: end;
-                margin-left: 50vw;
+
                 color: white;
                 font-size: 45px;
                 text-shadow: 0 0 9px black;
                 z-index: 1;
-                position: absolute;
-                top: 52vw;
+
                 cursor: pointer;
             }
 
@@ -105,14 +111,13 @@
         /*TABLET*/
         @media screen and (min-width:860px) {
             #index .splash_text {
-                text-align: end;
-                margin-left: 50vw;
+
+
                 color: white;
                 font-size: 45px;
                 text-shadow: 0 0 9px black;
                 z-index: 1;
-                position: absolute;
-                top: 47vw;
+
                 cursor: pointer;
             }
 
@@ -150,13 +155,11 @@
             }
 
             #index .splash_text {
-                text-align: end;
-                margin-left: 75vw;
+
                 color: white;
                 font-size: 45px;
                 text-shadow: 0 0 9px white;
-                position: fixed;
-                top: 35vw;
+
                 cursor: pointer;
                 letter-spacing: 3px;
             }
@@ -164,6 +167,8 @@
             #index .splash_text p {
                 font-family: 'Bebas Neue', cursive;
             }
+
+
         }
     </style>
 
@@ -205,17 +210,20 @@
                 </nav>
             </div>
         </header>
-        <div class="splash_text">
-            <a onclick="window.location.href='about.html'">
-                <p>THE LEFTOVERS</p>
-            </a>
+
+        <div class="alt">
+            <div class="splash_text">
+                <a onclick="window.location.href='about.html'">
+                    <p>THE LEFTOVERS</p>
+                </a>
 
 
-        </div>
-        <div class="header_img">
-            <video class="header_img video" autoplay="" muted="" loop="" id="video">
-                <source src="video/bg-video2.mp4" type="video/mp4">
-            </video>
+            </div>
+            <div class="header_img">
+                <video class="header_img video" autoplay="" muted="" loop="" id="video">
+                    <source src="video/bg-video2.mp4" type="video/mp4">
+                </video>
+            </div>
         </div>
 
         <script src="script.js"></script>
