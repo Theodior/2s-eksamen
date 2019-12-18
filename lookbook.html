@@ -119,8 +119,8 @@
 
         .radio_btn_container {
             /*Containeren til kanpperne i bunden, de skal sidde i midten*/
-            display: flex;
-            justify-content: center;
+            display: table-row;
+
 
 
         }
@@ -133,32 +133,32 @@
 
 
         input[type='radio']:after {
-        width: 15px;
-        height: 15px;
-        border-radius: 15px;
-        top: -2px;
-        left: -1px;
-        position: relative;
-        background-color: #d1d3d1;
-        content: '';
-        display: inline-block;
-        visibility: visible;
-        border: 2px solid white;
-    }
+            width: 10px;
+            height: 10px;
+            border-radius: 15px;
+            top: -2px;
+            left: -1px;
+            position: relative;
+            background-color: #d1d3d1;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 2px solid white;
+        }
 
-    input[type='radio']:checked:after {
-        width: 15px;
-        height: 15px;
-        border-radius: 15px;
-        top: -2px;
-        left: -1px;
-        position: relative;
-        background-color: #ffa500;
-        content: '';
-        display: inline-block;
-        visibility: visible;
-        border: 2px solid white;
-    }
+        input[type='radio']:checked:after {
+            width: 10px;
+            height: 10px;
+            border-radius: 15px;
+            top: -2px;
+            left: -1px;
+            position: relative;
+            background-color: #ffa500;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 2px solid white;
+        }
 
 
         @media screen and (min-width:1000px) {
@@ -172,6 +172,7 @@
                 cursor: pointer;
                 z-index: 1;
             }
+
 
             main {
                 /*            width: 50vw;*/
@@ -200,8 +201,27 @@
                 margin: 0px;
 
             }
-        }
 
+            .radio_btn_container {
+                display: flex;
+                justify-content: center;
+            }
+
+            .btn7,
+            .btn8,
+            .btn9,
+            .btn10,
+            .btn11,
+            .btn12,
+            .btn13,
+            .btn14,
+            .btn15,
+            .btn16,
+            .btn17,
+            .btn18 {
+                display: none;
+            }
+        }
     </style>
 
     <!--FAVICON-->
@@ -472,6 +492,4 @@
             }
         }
     </script>
-</body>
-
-</html>
+</body></html>

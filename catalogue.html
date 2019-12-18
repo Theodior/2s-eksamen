@@ -181,6 +181,21 @@
     }
 
 
+    .liste:hover .katalog {
+        filter: blur(.2px);
+        opacity: .7;
+        transform: scale(.98);
+
+    }
+
+    .liste:hover .katalog:hover {
+        transform: scale(1);
+        filter: blur(0px);
+        opacity: 1;
+
+    }
+
+
 
 
     @media screen and (min-width:600px) {
@@ -456,25 +471,6 @@
         right: 0;
     }
 
-
-
-
-
-
-
-    .liste:hover .katalog {
-        filter: blur(.6px);
-        opacity: .8;
-        transform: scale(.98);
-
-    }
-
-    .liste:hover .katalog:hover {
-        transform: scale(1);
-        filter: blur(0px);
-        opacity: 1;
-
-    }
 </style>
 
 
@@ -572,4 +568,6 @@
     </footer>
 
     <script src="script.js"></script>
-</body></html>
+</body>
+
+</html>
