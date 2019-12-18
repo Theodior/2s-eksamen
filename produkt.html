@@ -112,23 +112,25 @@
 
 
     .buy {
-        background-color: black;
-        border: none;
-        color: snow;
-        padding: 15px 32px;
-        border-radius: 22px;
-        text-align: center;
-        font-size: 16px;
+
+
+        padding: 14px 35px;
+        background-color: #EDEDEF;
+        border: 0.1px solid black;
+        color: black;
+
         cursor: pointer;
-        margin-left: 3vw;
-        margin-top: 0vw;
-        z-index: 1;
+
+        transition-duration: 0.2s;
+
+
+
 
     }
 
     .buy:hover {
         color: black;
-        background-color: whitesmoke;
+        background-color: white;
     }
 
     .info h2 {
@@ -284,7 +286,7 @@
         }
 
         .tom {
-            height: 10vw;
+            height: 5vw;
         }
 
         .gridsingle {
@@ -350,17 +352,22 @@
 
 
         .luk {
-            display: flex;
-            background-color: black;
             border: none;
-            color: snow;
-            padding: 15px 32px;
-            border-radius: 22px;
+            display: inline-block;
+            padding: 13px 20px;
+            background-color: #EDEDEF;
+            border: 0.1px solid black;
+            color: black;
             text-align: center;
-            font-size: 16px;
             cursor: pointer;
-            margin-left: 3vw;
-            margin-top: 8vw;
+            border-radius: 0px;
+            transition-duration: 0.2s;
+            margin: 10px;
+            justify-content: center;
+
+
+            margin-left: 6vw;
+            margin-top: 10vw;
             margin-bottom: 2vw;
 
         }
@@ -374,19 +381,16 @@
 
         .koeb {
 
-            grid-row: 4;
+            grid-row: 3;
             grid-column: 2;
             margin: 0px;
+            margin-top: 2vw;
 
 
         }
 
-        .buy {
-            margin-bottom: 4vw;
-            margin-left: 15.5vw;
-            margin-top: -5vw;
-            z-index: 1;
-        }
+
+
 
 
         article.info {
@@ -407,6 +411,7 @@
 
 
     }
+
 </style>
 
 <body>
@@ -526,5 +531,8 @@
         document.querySelector(".luk").addEventListener("click", () => {
             history.back();
         })
+
     </script>
-</body></html>
+</body>
+
+</html>
