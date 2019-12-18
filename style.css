@@ -10,7 +10,7 @@ body {
     border: 0;
 }
 
-::selection{
+::selection {
     background: #8857b9;
 }
 
@@ -27,7 +27,7 @@ h3 {
 }
 
 h4 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 p {
@@ -140,7 +140,7 @@ nav a:hover {
     text-shadow: 0 0 0.5px black;
     color: black;
     text-decoration: underline;
-/*    text-decoration: line-through;*/
+    /*    text-decoration: line-through;*/
 }
 
 
