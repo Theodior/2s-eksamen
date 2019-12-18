@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="da">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>katalog</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
 </head>
 
 <style>
-    #cata .filter {
+    #catalogue .filter {
         font-family: 'Roboto', sans-serif;
     }
 
@@ -39,7 +39,7 @@
         top: 95px;
     }
 
-    #cata .logo {
+    #catalogue .logo {
         width: 18vw;
         height: 18vh;
         position: fixed;
@@ -318,7 +318,7 @@
 
     @media screen and (min-width:1110px) {
 
-        #cata .logo {
+        #catalogue .logo {
             width: 18vw;
             height: 18vh;
             position: fixed;
@@ -472,99 +472,100 @@
     }
 </style>
 
+<body>
 
 
 
-<header>
-    <div class="topnav">
-        <div class="marg">
+    <header>
+        <div class="topnav">
+            <div class="marg">
+                <nav>
+                    <a href="index.html">FORSIDE</a>
+                    <a href="about.html">ABOUT US</a>
+                    <a href="catalogue.html">CATALOGUE</a>
+                    <a href="lookbook.html">LOOKBOOK</a>
+                    <a href="contact.html">CONTACT</a>
+                    <a href="stockists.html">STOCKISTS</a>
+                </nav>
+            </div>
+        </div>
+        <!--burger menu-->
+        <div class="burgermenu">
             <nav>
-                <a href="index.html">FORSIDE</a>
-                <a href="about.html">ABOUT US</a>
-                <a href="catalogue.html">CATALOGUE</a>
-                <a href="lookbook.html">LOOKBOOK</a>
-                <a href="contact.html">CONTACT</a>
-                <a href="stockists.html">STOCKISTS</a>
+                <div id="menuknap">☰</div>
+                <ul id="menu" class="hidden">
+                    <li><a href="index.html">FORSIDE</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li> <a href="catalogue.html">CATALOGUE</a></li>
+                    <li> <a href="lookbook.html">LOOKBOOK</a></li>
+                    <li> <a href="contact.html">CONTACT</a></li>
+                    <li> <a href="stockists.html">STOCKISTS</a></li>
+                </ul>
             </nav>
         </div>
-    </div>
-    <!--burger menu-->
-    <div class="burgermenu">
-        <nav>
-            <div id="menuknap">☰</div>
-            <ul id="menu" class="hidden">
-                <li><a href="index.html">FORSIDE</a></li>
-                <li><a href="about.html">ABOUT US</a></li>
-                <li> <a href="catalogue.html">CATALOGUE</a></li>
-                <li> <a href="lookbook.html">LOOKBOOK</a></li>
-                <li> <a href="contact.html">CONTACT</a></li>
-                <li> <a href="stockists.html">STOCKISTS</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    </header>
 
-<body id="cata">
-    <section id="catalogue">
+    <body>
+        <section id="catalogue">
 
-        <img class="logo" src="logo/1x/re-drawn.svg" onclick="window.location.href='index.html'" alt="leftover logo">
+            <img class="logo" src="logo/1x/re-drawn.svg" onclick="window.location.href='index.html'" alt="leftover logo">
 
-        <div class="overskriftkatalog">
-            <h2 class="tlo">CATALOGUE</h2>
-        </div>
+            <div class="overskriftkatalog">
+                <h2 class="tlo">CATALOGUE</h2>
+            </div>
 
-        <div class="katalog_filter">
-            <button class="filter valgt" data-kategori="Alle">ALL</button>
-            <button class="filter" data-kategori="T-Shirt">T-SHIRTS</button>
-            <button class="filter" data-kategori="Hoodie">HOODIES</button>
-            <button class="filter" data-kategori="Bag">BAGS</button>
-        </div>
+            <div class="katalog_filter">
+                <button class="filter valgt" data-kategori="Alle">ALL</button>
+                <button class="filter" data-kategori="T-Shirt">T-SHIRTS</button>
+                <button class="filter" data-kategori="Hoodie">HOODIES</button>
+                <button class="filter" data-kategori="Bag">BAGS</button>
+            </div>
 
 
 
-        <div id="single">
-            <section class="liste">
-                <article class="beskrivelse">
+            <div id="single">
+                <section class="liste">
+                    <article class="beskrivelse">
 
 
-                    <div class="blur">
-                        <img class="billede" src="" alt=""> </div>
-                    <h2></h2>
+                        <div class="blur">
+                            <img class="billede" src="" alt=""> </div>
+                        <h2></h2>
 
-                    <p class="pris">kr</p>
+                        <p class="pris">kr</p>
+                    </article>
+
+                </section>
+
+            </div>
+
+            <template>
+                <article class="katalog">
+
+                    <div class="hove">
+
+
+                        <img src="" alt="">
+                        <h2 class="title"></h2>
+
+
+
+
+
+
+
+                    </div>
+
+
                 </article>
+            </template>
+        </section>
 
-            </section>
+        <div class="tom"></div>
 
-        </div>
+        <footer>
 
-        <template>
-            <article class="katalog">
+        </footer>
 
-                <div class="hove">
-
-
-                    <img src="" alt="">
-                    <h2 class="title"></h2>
-
-
-
-
-
-
-
-                </div>
-
-
-            </article>
-        </template>
-    </section>
-
-    <div class="tom"></div>
-
-    <footer>
-
-    </footer>
-
-    <script src="script.js"></script>
-</body></html>
+        <script src="script.js"></script>
+    </body></html>

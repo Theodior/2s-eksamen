@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="da">
 <!-- Denne side er en single view page hard wired til at vise cykel post fra læerer Klaus wp side id nr 221  -->
 
 <head>
@@ -7,244 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOOKBOOK</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        #look {
-            font-family: sans-serif;
-
-            background-color: #EDEDEF;
-
-
-
-        }
-
-        h1 {
-            font-size: 3rem;
-        }
-
-        .empty {
-            height: 8vw;
-            width: 100vw;
-        }
-
-        #look .logo {
-            width: 18vw;
-            height: 18vh;
-            position: fixed;
-            right: 79vw;
-            top: 1.5vw;
-            cursor: pointer;
-            z-index: 1;
-        }
-
-
-        main {
-            /*            width: 50vw;*/
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            margin-bottom: 10vw;
-        }
-
-        /* Her starter karrusel   styles   */
-        .carousel {
-            /*  Denne hoved container indeholder 3 elementer .bwd   .pics_container og .fwd for at få dem vandret får de en gang flex         */
-            display: flex;
-            /*  Karrusellen skal fylde helt ud i det element ve putter den ind i fx et grid*/
-            width: 80%;
-            margin: 0px;
-
-        }
-
-        .pics_container {
-            /* Dette element er "hullet vi kigger igennem ind på strimlen af billeder"*/
-            overflow: hidden;
-
-        }
-
-
-        .over_skrift {
-            display: flex;
-            justify-content: center;
-        }
-
-        .pics {
-            /* Hvis ikke sætter left til 0, kører  den første animation ikke, da det er left vores transition animerer  */
-            left: 0;
-            /*Vi kan ikke animere positioner uden at gøre elementet positaion relative*/
-            position: relative;
-            /* Vi vil gerene have rækken af billeder centreret i "hullet vi kigger igennem, man kunne også flex-start fx" */
-            display: flex;
-            align-items: center;
-            /*Det et denne transition der gør at karrusellen ikke bare hopper fra det ene billede til det næste*/
-            transition: all 1s;
-
-            /*Dette element skal have antallet af billeder gange 100% som width, men da antallet af billeder jo varierer er dette flyttet ned i javaScriptet             */
-        }
-
-        .img_container {
-            /* Hvert img ligger i en img_container - det virker ikke uden  */
-            width: 100%;
-
-
-        }
-
-        img {
-            /* En klassiker*/
-            width: 100%;
-
-        }
-
-        .fwd,
-        .bwd {
-            font-size: 48px;
-            width: 48px;
-            /* Flex for at centrere frem og tilbage pilene i højden */
-            display: flex;
-            align-items: center;
-            /* Vi kan  jo klikke på dem så pointer!     */
-            cursor: pointer;
-            color: #000000;
-
-        }
-
-        .fwd {
-            /* fwd knappen skal lægge sig mod højre, hvis man gør font størrelsen meget lille på den, vil det blive et problem uden flex-end          */
-            justify-content: flex-end;
-            margin-left: 1rem;
-        }
-
-        .bwd {
-            margin-right: 1rem;
-        }
-
-        .radio_btn_container {
-            /*Containeren til kanpperne i bunden, de skal sidde i midten*/
-            display: table-row;
-
-
-
-        }
-
-        .radioBTN {
-            /* Vi kan  jo klikke på dem så pointer!     */
-            cursor: pointer;
-
-        }
-
-
-        input[type='radio']:after {
-
-            width: 13px;
-            height: 13px;
-            border-radius: 15px;
-            top: -2px;
-            left: -1px;
-            position: relative;
-            background-color: #d1d3d1;
-            content: '';
-            display: inline-block;
-            visibility: visible;
-            border: 2px solid white;
-        }
-
-        input[type='radio']:checked:after {
-            width: 13px;
-            height: 13px;
-            border-radius: 15px;
-            top: -2px;
-            left: -1px;
-            position: relative;
-            background-color: #f9b016;
-            content: '';
-            display: inline-block;
-            visibility: visible;
-            border: 2px solid white;
-        }
-
-
-        @media screen and (min-width:650px) {
-
-            .img_container {
-                /* Hvert img ligger i en img_container - det virker ikke uden  */
-                width: 100vw;
-
-
-            }
-
-
-            .carousel {
-                width: 50vw;
-            }
-
-
-
-        }
-
-
-
-        @media screen and (min-width:1000px) {
-
-            #look .logo {
-                width: 18vw;
-                height: 18vh;
-                position: fixed;
-                right: 0.1px;
-                top: 1.5vw;
-                cursor: pointer;
-                z-index: 1;
-            }
-
-
-            main {
-                /*            width: 50vw;*/
-                display: flex;
-                justify-content: center;
-                width: 100%;
-            }
-
-            .img_container {
-                /* Hvert img ligger i en img_container - det virker ikke uden  */
-                width: 1.8%;
-
-            }
-
-            img {
-                /* En klassiker*/
-                width: 95%;
-
-            }
-
-            .carousel {
-                /*  Denne hoved container indeholder 3 elementer .bwd   .pics_container og .fwd for at få dem vandret får de en gang flex         */
-                display: flex;
-                /*  Karrusellen skal fylde helt ud i det element ve putter den ind i fx et grid*/
-                width: 80%;
-                margin: 0px;
-
-            }
-
-            .radio_btn_container {
-                display: flex;
-                justify-content: center;
-            }
-
-            .btn7,
-            .btn8,
-            .btn9,
-            .btn10,
-            .btn11,
-            .btn12,
-            .btn13,
-            .btn14,
-            .btn15,
-            .btn16,
-            .btn17,
-            .btn18 {
-                display: none;
-            }
-        }
-    </style>
-
     <!--FAVICON-->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -257,48 +19,295 @@
     <!--FAVICON slut-->
 
 </head>
+<style>
+    #look {
+        font-family: sans-serif;
 
-<header id="top">
-    <div class="topnav">
-        <nav>
-            <a href="index.html">FORSIDE</a>
-            <a href="about.html">ABOUT US</a>
-            <a href="catalogue.html">CATALOGUE</a>
-            <a href="lookbook.html">LOOKBOOK</a>
-            <a href="contact.html">CONTACT</a>
-            <a href="stockists.html">STOCKISTS</a>
-        </nav>
-    </div>
-    <!--burger menu-->
-    <div class="burgermenu">
-        <nav>
-            <div id="menuknap">☰</div>
-            <ul id="menu" class="hidden">
-                <li><a href="index.html">FORSIDE</a></li>
-                <li><a href="about.html">ABOUT US</a></li>
-                <li> <a href="catalogue.html">CATALOGUE</a></li>
-                <li> <a href="lookbook.html">LOOKBOOK</a></li>
-                <li> <a href="contact.html">CONTACT</a></li>
-                <li> <a href="stockists.html">STOCKISTS</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+        background-color: #EDEDEF;
 
-<body id="look">
-    <img class="logo" src="logo/1x/re-drawn.svg" onclick="window.location.href='index.html'" alt="leftover logo">
 
-    <div class="empty">
 
-    </div>
-    <!-- Templaten vi kloner ind i pics elementet  -->
-    <template>
-        <article class="img_container">
-            <img src="" alt="">
-        </article>
-    </template>
+    }
 
-    <h1 class="over_skrift"></h1>
+    html {
+        background-color: #EDEDEF;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .empty {
+        height: 8vw;
+        width: 100vw;
+    }
+
+    #look .logo {
+        width: 18vw;
+        height: 18vh;
+        position: fixed;
+        right: 79vw;
+        top: 1.5vw;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+
+    main {
+        /*            width: 50vw;*/
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 10vw;
+    }
+
+    /* Her starter karrusel   styles   */
+    .carousel {
+        /*  Denne hoved container indeholder 3 elementer .bwd   .pics_container og .fwd for at få dem vandret får de en gang flex         */
+        display: flex;
+        /*  Karrusellen skal fylde helt ud i det element ve putter den ind i fx et grid*/
+        width: 80%;
+        margin: 0px;
+        background-color: #EDEDEF;
+
+    }
+
+    .pics_container {
+        /* Dette element er "hullet vi kigger igennem ind på strimlen af billeder"*/
+        overflow: hidden;
+
+    }
+
+
+    .over_skrift {
+        display: flex;
+        justify-content: center;
+    }
+
+    .pics {
+        /* Hvis ikke sætter left til 0, kører  den første animation ikke, da det er left vores transition animerer  */
+        left: 0;
+        /*Vi kan ikke animere positioner uden at gøre elementet positaion relative*/
+        position: relative;
+        /* Vi vil gerene have rækken af billeder centreret i "hullet vi kigger igennem, man kunne også flex-start fx" */
+        display: flex;
+        align-items: center;
+        /*Det et denne transition der gør at karrusellen ikke bare hopper fra det ene billede til det næste*/
+        transition: all 1s;
+
+        /*Dette element skal have antallet af billeder gange 100% som width, men da antallet af billeder jo varierer er dette flyttet ned i javaScriptet             */
+    }
+
+    .img_container {
+        /* Hvert img ligger i en img_container - det virker ikke uden  */
+        width: 100%;
+
+
+    }
+
+    img {
+        /* En klassiker*/
+        width: 100%;
+
+    }
+
+    .fwd,
+    .bwd {
+        font-size: 48px;
+        width: 48px;
+        /* Flex for at centrere frem og tilbage pilene i højden */
+        display: flex;
+        align-items: center;
+        /* Vi kan  jo klikke på dem så pointer!     */
+        cursor: pointer;
+        color: #000000;
+
+    }
+
+    .fwd {
+        /* fwd knappen skal lægge sig mod højre, hvis man gør font størrelsen meget lille på den, vil det blive et problem uden flex-end          */
+        justify-content: flex-end;
+        margin-left: 1rem;
+    }
+
+    .bwd {
+        margin-right: 1rem;
+    }
+
+    .radio_btn_container {
+        /*Containeren til kanpperne i bunden, de skal sidde i midten*/
+        display: table-row;
+
+
+
+    }
+
+    .radioBTN {
+        /* Vi kan  jo klikke på dem så pointer!     */
+        cursor: pointer;
+
+    }
+
+
+    input[type='radio']:after {
+
+        width: 13px;
+        height: 13px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #d1d3d1;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+    input[type='radio']:checked:after {
+        width: 13px;
+        height: 13px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #f9b016;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+
+    @media screen and (min-width:650px) {
+
+        .img_container {
+            /* Hvert img ligger i en img_container - det virker ikke uden  */
+            width: 100vw;
+
+
+        }
+
+
+        .carousel {
+            width: 50vw;
+        }
+
+
+
+    }
+
+
+
+    @media screen and (min-width:1000px) {
+
+        #look .logo {
+            width: 18vw;
+            height: 18vh;
+            position: fixed;
+            right: 0.1px;
+            top: 1.5vw;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+
+        main {
+            /*            width: 50vw;*/
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .img_container {
+            /* Hvert img ligger i en img_container - det virker ikke uden  */
+            width: 1.8%;
+
+        }
+
+        img {
+            /* En klassiker*/
+            width: 95%;
+
+        }
+
+        .carousel {
+            /*  Denne hoved container indeholder 3 elementer .bwd   .pics_container og .fwd for at få dem vandret får de en gang flex         */
+            display: flex;
+            /*  Karrusellen skal fylde helt ud i det element ve putter den ind i fx et grid*/
+            width: 80%;
+            margin: 0px;
+
+        }
+
+        .radio_btn_container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn7,
+        .btn8,
+        .btn9,
+        .btn10,
+        .btn11,
+        .btn12,
+        .btn13,
+        .btn14,
+        .btn15,
+        .btn16,
+        .btn17,
+        .btn18 {
+            display: none;
+        }
+    }
+</style>
+
+<body>
+
+
+
+    <header id="top">
+        <div class="topnav">
+            <nav>
+                <a href="index.html">FORSIDE</a>
+                <a href="about.html">ABOUT US</a>
+                <a href="catalogue.html">CATALOGUE</a>
+                <a href="lookbook.html">LOOKBOOK</a>
+                <a href="contact.html">CONTACT</a>
+                <a href="stockists.html">STOCKISTS</a>
+            </nav>
+        </div>
+        <!--burger menu-->
+        <div class="burgermenu">
+            <nav>
+                <div id="menuknap">☰</div>
+                <ul id="menu" class="hidden">
+                    <li><a href="index.html">FORSIDE</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li> <a href="catalogue.html">CATALOGUE</a></li>
+                    <li> <a href="lookbook.html">LOOKBOOK</a></li>
+                    <li> <a href="contact.html">CONTACT</a></li>
+                    <li> <a href="stockists.html">STOCKISTS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="look">
+        <img class="logo" src="logo/1x/re-drawn.svg" onclick="window.location.href='index.html'" alt="leftover logo">
+
+        <div class="empty">
+
+        </div>
+        <!-- Templaten vi kloner ind i pics elementet  -->
+        <template>
+            <article class="img_container">
+                <img src="" alt="">
+            </article>
+        </template>
+
+        <h1 class="over_skrift"></h1>
+    </section>
     <main>
         <!--Her starter karrusellens HTML    -->
         <section class="carousel">
@@ -320,9 +329,11 @@
         </section>
     </main>
 
+
     <footer>
 
     </footer>
+
 
     <script>
         "use strict"
@@ -512,8 +523,6 @@
                 document.querySelector("#menuknap").textContent = "X";
             }
         }
-
     </script>
-</body>
 
-</html>
+</body></html>
