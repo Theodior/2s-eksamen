@@ -23,7 +23,7 @@
 <!--FAVICON slut-->
 <style>
     /*MOBILE*/
-    #index .logo {
+    #index .logo2 {
         width: 18vw;
         height: 18vh;
         position: fixed;
@@ -31,6 +31,10 @@
         top: 1.5vw;
         cursor: pointer;
         z-index: 1;
+    }
+
+    #index .logo {
+        display: none;
     }
 
     p {
@@ -92,6 +96,7 @@
     /*DESKTOP*/
     @media screen and (min-width:1000px) {
         #index .logo {
+            display: block;
             width: 18vw;
             height: 18vh;
             position: fixed;
@@ -100,6 +105,10 @@
             cursor: pointer;
             z-index: 1;
 
+        }
+
+        #index .logo2 {
+            display: none;
         }
 
         #index .header_img img {
@@ -140,7 +149,6 @@
 
 
     }
-
 </style>
 
 <body>
@@ -154,7 +162,7 @@
 
     <section id="index">
         <img class="logo" src="logo/1x/shadow-retegn.svg" onclick="window.location.href='index.html'" alt="leftover logo">
-
+        <img class="logo2" src="logo/1x/re-drawn.svg" onclick="window.location.href='index.html'" alt="leftover logo">
         <header>
             <div class="topnav">
                 <nav>
@@ -199,6 +207,4 @@
 
         <script src="script.js"></script>
     </section>
-</body>
-
-</html>
+</body></html>
