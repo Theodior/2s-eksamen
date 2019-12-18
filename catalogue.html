@@ -98,6 +98,7 @@
     .katalog:hover {
         text-decoration: underline;
         cursor: pointer;
+
     }
 
 
@@ -156,15 +157,15 @@
     .katalog_filter button {
         border: none;
         display: inline-block;
-        padding: 10px 20px;
-        background-color: black;
-        color: white;
+        padding: 13px 20px;
+        background-color: #EDEDEF;
+        border: 0.1px solid black;
+        color: black;
         text-align: center;
         cursor: pointer;
-        border-radius: 22px;
+        border-radius: 0px;
         transition-duration: 0.2s;
         margin: 10px;
-
         justify-content: center;
         margin-bottom: 0vw;
 
@@ -340,16 +341,15 @@
         .katalog_filter button {
             border: none;
             display: inline-block;
-            padding: 10px 20px;
-            background-color: black;
-            color: white;
-
+            padding: 15px 30px;
+            background-color: #EDEDEF;
+            border: 0.1px solid black;
+            color: black;
             text-align: center;
             cursor: pointer;
-            border-radius: 22px;
+            border-radius: 0px;
             transition-duration: 0.2s;
-            margin: 20px;
-
+            margin: 10px;
             justify-content: center;
             margin-bottom: 0vw;
 
@@ -455,6 +455,26 @@
         position: absolute;
         right: 0;
     }
+
+
+
+
+
+
+
+    .liste:hover .katalog {
+        filter: blur(.6px);
+        opacity: .8;
+        transform: scale(.98);
+
+    }
+
+    .liste:hover .katalog:hover {
+        transform: scale(1);
+        filter: blur(0px);
+        opacity: 1;
+
+    }
 </style>
 
 
@@ -511,7 +531,9 @@
             <section class="liste">
                 <article class="beskrivelse">
 
-                    <img class="billede" src="" alt="">
+
+                    <div class="blur">
+                        <img class="billede" src="" alt=""> </div>
                     <h2></h2>
 
                     <p class="pris">kr</p>
@@ -525,8 +547,12 @@
             <article class="katalog">
 
                 <div class="hove">
+
+
                     <img src="" alt="">
                     <h2 class="title"></h2>
+
+
 
 
 
