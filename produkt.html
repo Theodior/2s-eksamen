@@ -34,11 +34,13 @@
         width: 18vw;
         height: 18vh;
         position: fixed;
-        right: 83vw;
+        right: 79vw;
         top: 1.5vw;
         cursor: pointer;
         z-index: 1;
     }
+
+
 
 
 
@@ -76,7 +78,8 @@
     .gridsingle {
         display: grid;
         grid-template-columns: 10vw 80vw 10vw;
-        grid-auto-rows: 13vw 50vw 15vw 25vw 5vw 5vw;
+        grid-auto-rows: 13vw 58vw 15vw 25vw 5vw 5vw 10vw;
+        margin-bottom: 5vw;
 
         align-self: center;
     }
@@ -146,8 +149,9 @@
 
         display: flex;
         justify-content: center;
-        font-size: 3em;
+        font-size: 2em;
         margin: 0px;
+
 
 
     }
@@ -211,7 +215,7 @@
         .gridsingle {
             display: grid;
             grid-template-columns: 10vw 80vw 10vw;
-            grid-auto-rows: 13vw 35vw 10vw 15vw 5vw 5vw;
+            grid-auto-rows: 13vw 40vw 10vw 15vw 5vw 5vw;
 
             align-self: center;
         }
@@ -241,7 +245,7 @@
         .gridsingle {
             display: grid;
             grid-template-columns: 10vw 80vw 10vw;
-            grid-auto-rows: 11vw 28vw 7vw 10vw 5vw 5vw;
+            grid-auto-rows: 11vw 32vw 7vw 10vw 5vw 5vw;
 
             align-self: center;
         }
@@ -298,10 +302,11 @@
         .gridsingle {
             display: grid;
             grid-template-columns: 37vw 30vw;
-            grid-template-rows: 6vw 14vw 4vw 3vw 3vw;
+            grid-template-rows: 6vw 18vw 4vw 3vw 3vw;
             margin-left: 15vw;
             align-self: center;
             grid-column-gap: 4vw;
+            margin-bottom: 0vw;
 
 
 
@@ -418,6 +423,7 @@
 
 
     }
+
 </style>
 
 <body>
@@ -537,6 +543,7 @@
         document.querySelector(".luk").addEventListener("click", () => {
             history.back();
         })
+
     </script>
 </body>
 
